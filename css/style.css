@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Share Tech", sans-serif;
+}
+
+
+main {
+    margin-left: 6%;
+    width: 94%;
+}
+
+body {
+    display: flex; 
+}
+
+header{
+    height: 100vh;
+    /* border: solid 1px rgb(255, 0, 0); */
+    width: 6%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #15191F;
+    
+}
+
+nav{
+    width:100%
+    
+}
+
+nav a{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+    color: #f6f6f6;
+    padding: 1rem;
+    align-items: center;
+}
+
+nav a:hover{
+    background-color: #f6f6f6;;
+    color: #1B1E26;
+}
+
+.home{
+    height: 100vh;
+    background-color: #1B1E26;
+}
+
+.home h1{
+    color: #f6f6f6;
+    display: flex;
+    
+}
+
