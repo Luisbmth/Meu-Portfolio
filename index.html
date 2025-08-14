@@ -3,59 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portifolio</title>
+    <title>Portfólio Luis</title>
     <link rel="stylesheet" href="./css/style.css">
-
-
-
-
-
-    <!-- fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
 
-
-
-
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-
         <nav>
-            <img src="" alt="">
-            <li>
-                <a href="#">About</a>
-                <a href="#">My skills</a>
-                <a href="#">Work</a>
-                <a href="#">Contact</a>
-            </li>
+            <div class="nav-logo">
+                
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
+                <li><a href="#work"><i class="fas fa-briefcase"></i><span>Work</span></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
         </nav>
-
     </header>
 
-
-<main>
+    <main>
     
-    
-        <section class="home">
-    
-            <h1>
-                Olá,<br>
-                Me chamo Luis <br>
-                Desenvolvedor Front-End
-            </h1>
-    
+        <section id="home" class="home">
+            <div class="home-content">
+                <h1>
+                    Olá,<br>
+                    Me chamo <span>Luis</span><br>
+                    Desenvolvedor Front-End
+                </h1>
+                <p class="subtitle">Criando experiências digitais com código limpo e designs impactantes</p>
+                <div class="home-buttons">
+                    <button type="button" class="btn-primary">Contact me</button>
+                    <button type="button" class="btn-outline">View Projects</button>
+                </div>
+            </div>
         </section>
+        
+        
+        <section id="skills" class="section skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML5</h3>
+            <p>Estrutura semântica e acessível</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS3</h3>
+            <p>Estilos criativos e responsivos</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Interatividade e lógica</p>
+        </div>
+
+
+      
+        <div class="skill-card">
+            <i class="fab fa-react"></i>
+            <h3>React Native</h3>
+            <p>Desenvolvimento mobile multiplataforma</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-bootstrap"></i>
+            <h3>Bootstrap</h3>
+            <p>Design responsivo rápido</p>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-wind"></i>
+            <h3>Tailwind CSS</h3>
+            <p>Utility-first CSS framework</p>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-linux"></i>
+            <h3>Linux</h3>
+            <p>Administração de sistemas</p>
+        </div>
+    </div>
+</section>
+        
+
+
+        <section id="work" class="section portfolio">
+            <h2 class="section-title">Featured <span>Work</span></h2>
+
+            <div class="portfolio-grid">
+
+                <div class="project-card" style="background-color: #15191F; border-radius: 8px; padding: 1rem;">
+                    <div class="project-image">
+                        <img src="./img/orblyCode.png" alt="Imagem do site OrblyCode">
+                    </div>
+                    <div class="project-info">
+                        <h3>Orbly Code</h3>
+                        <p>Startup criada com meus amigos com o foco na criação de sites, sistemas e Apps.</p>
+                        <a href="https://orblycode.com.br/" class="project-link" target="_blank" >View Project →</a>
+                    </div>
+                </div>
+
+
+                <div class="project-card" style="background-color: #15191F; border-radius: 8px; padding: 1rem;">
+                    <div class="project-image">
+                        <img src="./img/ygo.png" alt="Imagem do site OrblyCode">
+                    </div>
+                    <div class="project-info">
+                        <h3>Yu-Gi-Oh</h3>
+                        <p>Esse projeto, foi feito durante um Curso de Front End feito na Dio,que consiste em um jogo de pedra, papel ou tesoura mas com cartas do jogo Yu-Gi-Oh</p>
+                        <a href="https://github.com/Luisbmth/js-game-yugioh-jokenpo" class="project-link" target="_blank" >View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background-color: #15191F; border-radius: 8px; padding: 1rem;">
+                    <div class="project-image">
+                        <img src="img/TelaDiscord.png" alt="Imagem do site OrblyCode">
+                    </div>
+                    <div class="project-info">
+                        <h3>Tela de home do Discord</h3>
+                        <p>Esse projeto, que também foi feito durante um Curso de Front End feito na Dio, foi um desafio bem divertido e desafiador</p>
+                        <a href="https://github.com/Luisbmth/Tela-Discord" class="project-link" target="_blank" >View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background-color: #15191F; border-radius: 8px; padding: 1rem;">
+                    <div class="project-image">
+                        <img src="./img/Cafeteria.png" alt="Imagem do site OrblyCode">
+                    </div>
+                    <div class="project-info">
+                        <h3>Cafeteria</h3>
+                        <p>Esse Projeto foi criado através de uma ideia de fazer uma landing page para uma cafeteria local, com images ilustrativas de produts criadas por inteligência Artificial</p>
+                        <a href="https://github.com/Luisbmth/Cafeteria" class="project-link" target="_blank" >View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background-color: #15191F; border-radius: 8px; padding: 1rem;">
+                    <div class="project-image">
+                        <img src="./img/Captura de tela 2025-08-14 133526.png" alt="Imagem do site OrblyCode">
+                    </div>
+                <div class="project-info">
+                        <h3>Pokedéx</h3>
+                        <p>Projeto feito no curso da DIO utilizando a PokéAPI para listar Pokémons.</p>
+                        <a href="https://github.com/Luisbmth/pokedex" class="project-link" target="_blank" >View Project →</a>
+                    </div>
+         
+            </div>
+        </section>
+
     
-    
-        <section></section>
-    
-    
-        <section></section>
-    
-    
-        <section></section>
-</main>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Luisbmth" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank"><i class="fab fa-linkedin" ></i></a>
+        </div>
+        <p>© 2025 Luis. All rights reserved.</p>
+    </footer>
 </body>
 </html>
