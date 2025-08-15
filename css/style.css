@@ -120,7 +120,8 @@ header:hover ~ main {
 .subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: var(--gray);
+    color: #40454d;
+    max-width: 38rem;
 }
 
 .home-buttons {
@@ -128,16 +129,30 @@ header:hover ~ main {
     gap: 1rem;
 }
 
-.btn-primary {
+.btn-primary a{
+    color: var(--dark);
+}
+
+.btn-primary{
     padding: 1rem 2rem;
-    background-color: var(--primary);
-    color: var(--darker);
-    border: none;
+    background-color:var(--primary);
+    border: 1px solid var(--primary);
+    color: transparent;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
     transition: all 0.3s ease;
 }
+
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.btn-primary:hover a{
+    color: var(--primary);
+}
+
 
 .btn-outline {
     padding: 1rem 2rem;
@@ -149,9 +164,15 @@ header:hover ~ main {
     transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 240, 255, 0.2);
+.btn-outline a {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+
+
+.btn-outline:hover a {
+    color: var(--darker);
 }
 
 .btn-outline:hover {
@@ -225,6 +246,10 @@ header:hover ~ main {
 .project-card {
     display: flex;
     flex-direction: column;
+    background-color: #15191F;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
 }
 
 
