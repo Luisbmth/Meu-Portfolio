@@ -1,0 +1,184 @@
+/* Tablet */
+@media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .hero-text {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Mobile Grande */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--darkest);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2.4rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .accordion-button {
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile Pequeno */
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .skill-card, 
+    .project-card {
+        padding: 2rem;
+    }
+}
+
+
+
+/* Tablet (768px - 992px) */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 2rem;
+    }
+}
+
+/* Mobile (até 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--darkest);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 8rem 2rem;
+        z-index: 1000;
+        transition: var(--transition);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        font-size: 2rem;
+        display: block;
+    }
+    
+    .nav-item:last-child {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .social-icon {
+        font-size: 2rem;
+    }
+    
+    /* Ajuste para evitar conflito com o toggle */
+    .navbar {
+        justify-content: flex-start;
+    }
+    
+    .theme-toggle.logo-replacement {
+        order: -1;
+        margin-right: auto;
+    }
+    
+    .hamburger {
+        margin-left: auto;
+    }
+}
+
+/* Mobile Pequeno (até 576px) */
+@media (max-width: 576px) {
+    .nav-menu {
+        width: 80%;
+    }
+    
+    .nav-link {
+        font-size: 1.8rem;
+    }
+    
+    .header {
+        padding: 1.5rem 0;
+    }
+}

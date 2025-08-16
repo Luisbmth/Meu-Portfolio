@@ -3,174 +3,516 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Luis</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Portifólio de Luis Felipe</title>
+    <meta name="description" content="Portfólio de Luis Felipe - Desenvolvedor Front-End especializado em React, JavaScript e interfaces modernas">
 
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
     
-    <!-- Fonts -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech&display=swap" rel="stylesheet">
 
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/resp.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-logo">
-                
+<body class="dark-mode">
+    <!-- Cursor Personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navbar -->
+    <header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <!-- Botão de Toggle de Tema no lugar da logo -->
+            <button id="theme-toggle" class="theme-toggle logo-replacement" aria-label="Alternar modo claro/escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home"><i class="fas fa-home"></i><span>Home</span></a></li>
-                <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
-                <li><a href="#work"><i class="fas fa-briefcase"></i><span>Work</span></a></li>
-                <li><a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#courses" class="nav-link">Cursos</a></li>
+                <li class="nav-item">
+                    <a href="https://github.com/Luisbmth" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
     <main>
-    
-        <section id="home" class="home">
-            <div class="home-content">
-                <h1>
-                    Olá,<br>
-                    Me chamo <span>Luis</span><br>
-                    Desenvolvedor Front-End
-                </h1>
-                <p class="subtitle">Desenvolvedor focado em front-end, especializado em criar interfaces modernas, responsivas e intuitivas. Tenho paixão por transformar conceitos visuais em experiências digitais funcionais e de alto desempenho, unindo estética, usabilidade e tecnologia.</p>
-                <div class="home-buttons">
-                    <button type="button" class="btn-primary"><a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank">Contact me</a></button>
-                    <button type="button" class="btn-outline"><a href="#work">View Projects</a></button>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h4 class="greeting">Olá, eu sou</h4>
+                        <h1 class="hero-title">Luis Felipe</h1>
+                        <h2 class="hero-subtitle">Desenvolvedor <span class="text-gradient">Front-End</span></h2>
+                        
+                        <p class="hero-description">
+                            Especialista em criar experiências digitais impressionantes com interfaces modernas, 
+                            responsivas e altamente performáticas usando as tecnologias mais atuais.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#work" class="btn btn-primary">
+                                Ver Projetos <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-paper-plane"></i> Contato
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <div class="tech-stack">
+                                <div class="tech-icon react"><i class="fab fa-react"></i></div>
+                                <div class="tech-icon js"><i class="fab fa-js"></i></div>
+                                <div class="tech-icon html"><i class="fab fa-html5"></i></div>
+                                <div class="tech-icon css"><i class="fab fa-css3-alt"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-down">
+                    <a href="#skills" class="scroll-link">
+                        <span class="scroll-wheel"></span>
+                    </a>
                 </div>
             </div>
         </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Minhas <span class="text-gradient">Habilidades</span></h2>
+                    <p class="section-subtitle">Tecnologias que domino e utilizo no meu dia a dia</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3 class="skill-title">HTML5</h3>
+                        <p class="skill-description">Estrutura semântica e acessível para todos os dispositivos</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3 class="skill-title">CSS3</h3>
+                        <p class="skill-description">Estilos criativos, animações e designs responsivos</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="skill-title">JavaScript</h3>
+                        <p class="skill-description">Lógica de programação e interatividade avançada</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3 class="skill-title">React Native</h3>
+                        <p class="skill-description">Desenvolvimento mobile multiplataforma</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <h3 class="skill-title">Bootstrap</h3>
+                        <p class="skill-description">Desenvolvimento ágil com componentes prontos</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h3 class="skill-title">Tailwind CSS</h3>
+                        <p class="skill-description">Utility-first CSS para designs rápidos e consistentes</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3 class="skill-title">Git</h3>
+                        <p class="skill-description">Controle de versão e trabalho em equipe</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h3 class="skill-title">Linux</h3>
+                        <p class="skill-description">Ambiente de desenvolvimento e servidores</p>
+                        <div class="skill-progress">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="work" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Meus <span class="text-gradient">Projetos</span></h2>
+                    <p class="section-subtitle">Alguns dos trabalhos que desenvolvi recentemente</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Projeto 1 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="./img/orblyCode.png" alt="Site OrblyCode">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://orblycode.com.br/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Luisbmth/orblycode" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Orbly Code</h3>
+                            <p class="project-description">
+                                Startup criada com meus amigos com o foco na criação de sites, sistemas e Apps.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 2 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="./img/ygo.png" alt="Jogo Yu-Gi-Oh">
+                            <div class="project-overlay">
+                                <div class="project-links">                                    
+                                    <a href="https://github.com/Luisbmth/js-game-yugioh-jokenpo" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Yu-Gi-Oh Jokenpô</h3>
+                            <p class="project-description">
+                                Jogo de pedra, papel ou tesoura com cartas do Yu-Gi-Oh desenvolvido durante curso na Dio.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 3 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="./img/TelaDiscord.png" alt="Clone Discord">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Luisbmth/Tela-Discord" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Clone Discord</h3>
+                            <p class="project-description">
+                                Clone da interface do Discord desenvolvido como desafio do curso da Dio.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 4 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="./img/Captura de tela 2025-08-14 133526.png" alt="Pokedéx">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Luisbmth/pokedex" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Pokédex</h3>
+                            <p class="project-description">
+                                Aplicação que consome a PokéAPI para listar e filtrar pokémons.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projeto 5 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="./img/Cafeteria.png" alt="Landing Page Cafeteria">
+                            <div class="project-overlay">
+                                <div class="project-links">
+
+                                    <a href="https://github.com/Luisbmth/Cafeteria" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Cafeteria</h3>
+                            <p class="project-description">
+                                Landing page para cafeteria local com design moderno e responsivo.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="more-projects" data-aos="fade-up">
+                    <a href="https://github.com/Luisbmth?tab=repositories" target="_blank" class="btn btn-outline">
+                        Ver mais projetos <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+    <h2 class="section-title display-4 fw-bold">Minhas <span class="text-gradient">Certificações</span></h2>
+    <p class="section-subtitle style="color: #adb5bd; >Conhecimento adquirido através de cursos e certificações</p>
+</div>
         
-        
-        <section id="skills" class="section skills">
-    <h2 class="section-title">My <span>Skills</span></h2>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <i class="fab fa-html5"></i>
-            <h3>HTML5</h3>
-            <p>Estrutura semântica e acessível</p>
+        <div class="accordion custom-accordion" id="coursesAccordion">
+            <!-- Curso 1 -->
+            <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="d-flex align-items-center w-100">
+                            <div class="course-icon me-3">
+                                <i class="fab fa-react fa-2x text-primary"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0 fw-bold">Front End</h3>
+                            </div>
+                            <i class="fas fa-chevron-down ms-auto transition-all"></i>
+                        </div>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#coursesAccordion">
+                    <div class="accordion-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-university me-2 text-muted"></i>
+                            <p class="course-institution mb-0"><strong>Instituição:</strong> DIO (Digital Innovation One)</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="far fa-calendar-alt me-2 text-muted"></i>
+                            <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
+                            <p class="course-description mb-0">
+                                O Bootcamp Santander 2025 – Front-End foi um curso completo com 102 horas de duração focado em HTML, CSS e JavaScript onde pude aprimorar meus conhecimentos em desenvolvimento web e colocar em prática projetos que iam desde telas inspiradas no Discord e YouTube até desafios mais complexos como um jogo de Pedra Papel e Tesoura com temática de Yu-Gi-Oh e uma Pokédex integrada a uma API.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="https://hermes.dio.me/certificates/GQL2K1IU.pdf" class="btn btn-primary btn-lg px-4 py-2" target="_blank">
+                                <i class="fas fa-certificate me-2"></i> Ver Certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Curso 2 -->
+            <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="d-flex align-items-center w-100">
+                <div class="course-icon me-3">
+                    <i class="fab fa-linux fa-2x text-black"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <h3 class="mb-0 fw-bold">Linux para Desenvolvedores+</h3>
+                </div>
+                <i class="fas fa-chevron-down ms-auto transition-all"></i>
+            </div>
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#coursesAccordion">
+        <div class="accordion-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-university me-2 text-muted"></i>
+                <p class="course-institution mb-0"><strong>Instituição:</strong> Udemy</p>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <i class="far fa-calendar-alt me-2 text-muted"></i>
+                <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
+            </div>
+            <div class="d-flex mb-3">
+                <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
+                <p class="course-description mb-0">
+                    O curso Linux para Desenvolvedores (c/ terminal, Shell, Apache e +) é uma formação completa e prática que me permitiu dominar o uso avançado do terminal e shell scripting aprender a configurar ambientes de desenvolvimento e produção com gerenciamento de arquivos, permissões, usuários, pacotes, redes e até um ambiente LAMP integrado com Apache, MySQL e PHP ele foi estruturado com explicações teóricas e exercícios aplicados garantindo que, desde iniciantes até desenvolvedores experientes, pudessem aproveitar ao máximo os conteúdos e adquirir autonomia para atuar com Linux com segurança e eficiência
+                </p>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="https://www.udemy.com/course/linux-para-desenvolvedores-com-terminal-shell-apache/?couponCode=PMNVD2025" class="btn btn-primary btn-lg px-4 py-2" target="_blank">
+                    <i class="fas fa-certificate me-2"></i> Ver Certificado
+                </a>
+            </div>
         </div>
-        <div class="skill-card">
-            <i class="fab fa-css3-alt"></i>
-            <h3>CSS3</h3>
-            <p>Estilos criativos e responsivos</p>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>Interatividade e lógica</p>
-        </div>
+    </div>
+</div>
 
-
-      
-        <div class="skill-card">
-            <i class="fab fa-react"></i>
-            <h3>React Native</h3>
-            <p>Desenvolvimento mobile multiplataforma</p>
+<!-- Curso 3 -->
+<div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="200">
+    <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <div class="d-flex align-items-center w-100">
+                <div class="course-icon me-3">
+                    <i class="fas fa-robot fa-2x text-info"></i> <!-- Ícone de IA -->
+                </div>
+                <div class="flex-grow-1">
+                    <h3 class="mb-0 fw-bold">Programador Front-End com IA (Cursando)</h3>
+                </div>
+                <i class="fas fa-chevron-down ms-auto transition-all"></i>
+            </div>
+        </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#coursesAccordion">
+        <div class="accordion-body p-4">
+            <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-university me-2 text-muted"></i>
+                <p class="course-institution mb-0"><strong>Instituição:</strong> Senac RJ</p>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <i class="far fa-calendar-alt me-2 text-muted"></i>
+                <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
+            </div>
+            <div class="d-flex mb-3">
+                <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
+                <p class="course-description mb-0">
+                    Curso inovador que combina desenvolvimento Front-End (HTML, CSS, JavaScript e frameworks como React) com Inteligência Artificial. Aprendi a integrar soluções de IA como chatbots, APIs de machine learning e personalização de conteúdo, além de desenvolver interfaces responsivas com acessibilidade. Com 120 horas de carga horária, o curso incluiu projetos práticos que simulam demandas reais do mercado, preparando para atuar como desenvolvedor front-end com habilidades em IA.
+                </p>
+            </div>
+            
         </div>
+    </div>
+</div>
 
-        <div class="skill-card">
-            <i class="fab fa-bootstrap"></i>
-            <h3>Bootstrap</h3>
-            <p>Design responsivo rápido</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fas fa-wind"></i>
-            <h3>Tailwind CSS</h3>
-            <p>Utility-first CSS framework</p>
-        </div>
-        
-        <div class="skill-card">
-            <i class="fab fa-linux"></i>
-            <h3>Linux</h3>
-            <p>Familiaridade com sistemas</p>
+            
         </div>
     </div>
 </section>
-        
-
-
-        <section id="work" class="section portfolio">
-            <h2 class="section-title">Featured <span>Work</span></h2>
-
-            <div class="portfolio-grid">
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./img/orblyCode.png" alt="Imagem do site OrblyCode">
-                    </div>
-                    <div class="project-info">
-                        <h3>Orbly Code</h3>
-                        <p>Startup criada com meus amigos com o foco na criação de sites, sistemas e Apps.</p>
-                        <a href="https://orblycode.com.br/" class="project-link" target="_blank" >View Project →</a>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./img/ygo.png" alt="Imagem do projeto Yu-Gi-Oh">
-                    </div>
-                    <div class="project-info">
-                        <h3>Yu-Gi-Oh</h3>
-                        <p>Esse projeto, foi feito durante um Curso de Front End feito na Dio,que consiste em um jogo de pedra, papel ou tesoura mas com cartas do jogo Yu-Gi-Oh</p>
-                        <a href="https://github.com/Luisbmth/js-game-yugioh-jokenpo" class="project-link" target="_blank" >View Project →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="img/TelaDiscord.png" alt="Imagem do projeto Tela Discord">
-                    </div>
-                    <div class="project-info">
-                        <h3>Tela de home do Discord</h3>
-                        <p>Esse projeto, que também foi feito durante um Curso de Front End feito na Dio, foi um desafio bem divertido e desafiador</p>
-                        <a href="https://github.com/Luisbmth/Tela-Discord" class="project-link" target="_blank" >View Project →</a>
-                    </div>
-                </div>
-
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./img/Captura de tela 2025-08-14 133526.png" alt="Imagem projeto Pokedex">
-                    </div>
-                    <div class="project-info">
-                        <h3>Pokedéx</h3>
-                        <p>Projeto feito no curso da DIO utilizando a PokéAPI para listar Pokémons.</p>
-                        <a href="https://github.com/Luisbmth/pokedex" class="project-link" target="_blank" >View Project →</a>
-                    </div>
-                    
-                </div>
-                <div class="project-card">
-
-                    <div class="project-image">
-                        <img src="./img/Cafeteria.png" alt="Imagem do projeto cafeteria">
-                    </div>
-                    <div class="project-info">
-                        <h3>Cafeteria</h3>
-                        <p>Esse Projeto foi criado através de uma ideia de fazer uma landing page para uma cafeteria local, com images ilustrativas de produts criadas por inteligência Artificial</p>
-                        <a href="https://github.com/Luisbmth/Cafeteria" class="project-link" target="_blank" >View Project →</a>
-                    </div>
-                </div>
-        </section>
-
-    
     </main>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/Luisbmth" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank"><i class="fab fa-linkedin" ></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            
+                
+  
+                <div class="footer-column">
+                    <div class="social-links">
+                        <a href="https://github.com/Luisbmth" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/seuuser" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Luis Felipe. Todos os direitos reservados.</p>
+            </div>
         </div>
-        <p>© 2025 Luis. All rights reserved.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
