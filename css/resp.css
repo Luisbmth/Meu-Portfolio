@@ -17,7 +17,23 @@
     .section-title {
         font-size: 3.5rem;
     }
+
+    }
+
+.tech-icon.js {
+    margin-top: 3rem;
+    left: 7%;
+    color: #f7df1e;
+    animation-delay: 1s;
 }
+
+.tech-icon.react {
+    top: 100%;
+    right: 5%;
+    color: #61dafb;
+    animation-delay: 1.5s;
+}
+
 
 /* Mobile Grande */
 @media (max-width: 768px) {
