@@ -332,8 +332,8 @@ body.light-mode .nav-link.active {
 }
 
 .hero-description {
-    font-size: 1.6rem;
-    color: var(--gray-light);
+    font-size: 1.4rem;
+    color: #adb5bd;
     margin-bottom: 3rem;
     max-width: 500px;
 }
