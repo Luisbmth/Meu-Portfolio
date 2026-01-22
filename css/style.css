@@ -887,3 +887,47 @@ body.light-mode .scroll-link {
     transform: scale(1.1);
 }
 
+/* Estilos para os cards dos módulos Hackers do Bem */
+.bg-darker {
+    background-color: var(--darker) !important;
+}
+
+.border-light {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.card {
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary) !important;
+}
+
+.card-title {
+    font-family: 'Share Tech', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+    color: var(--gray-light);
+}
+
+/* Ajuste para Light Mode */
+body.light-mode .bg-darker {
+    background-color: #f8f9fa !important;
+}
+
+body.light-mode .border-light {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .card-text {
+    color: #666;
+}
+
