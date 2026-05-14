@@ -108,6 +108,7 @@ section {
 .btn-outline {
     border: 1px solid var(--primary);
     color: var(--primary);
+    background: transparent;
 }
 
 .btn-outline:hover {
@@ -117,7 +118,7 @@ section {
     box-shadow: var(--shadow);
 }
 
-/* Header Styles - Atualizado */
+/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -143,9 +144,8 @@ section {
 }
 
 /* Menu Hamburguer */
-/* Estilos base do hamburguer */
 .hamburger {
-    display: none; /* Escondido por padrão */
+    display: none;
     cursor: pointer;
     background: transparent;
     border: none;
@@ -262,24 +262,6 @@ section {
 .theme-toggle.logo-replacement:hover {
     color: var(--primary);
     transform: scale(1.1);
-}
-
-/* Light Mode Styles */
-body.light-mode .header {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-body.light-mode .bar,
-body.light-mode .theme-toggle.logo-replacement {
-    color: var(--darkest);
-}
-
-body.light-mode .nav-link {
-    color: var(--darkest);
-}
-
-body.light-mode .nav-link.active {
-    color: var(--primary);
 }
 
 /* Hero Section */
@@ -506,7 +488,7 @@ body.light-mode .nav-link.active {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 3rem;
     position: relative;
     z-index: 1;
@@ -679,7 +661,7 @@ body.light-mode .nav-link.active {
     margin-top: 5rem;
 }
 
-/* Courses Section */
+/* Courses Section - Accordion */
 .courses-section {
     background-color: var(--darker);
 }
@@ -795,7 +777,7 @@ body.light-mode .nav-link.active {
     transform: translateY(-5px);
 }
 
-/* Animações */
+/* Animações AOS */
 [data-aos] {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
@@ -831,8 +813,28 @@ body.light-mode {
     color: var(--darkest);
 }
 
+body.light-mode .header {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
 body.light-mode .header.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode .bar {
+    background-color: var(--darkest);
+}
+
+body.light-mode .theme-toggle.logo-replacement {
+    color: var(--darkest);
+}
+
+body.light-mode .nav-link {
+    color: var(--darkest);
+}
+
+body.light-mode .nav-link.active {
+    color: var(--primary);
 }
 
 body.light-mode .skills-section,
@@ -871,20 +873,24 @@ body.light-mode .scroll-link {
     color: var(--darkest);
 }
 
-/* Toggle de tema */
-.theme-toggle.logo-replacement {
-    background: none;
-    border: none;
-    font-size: 2.4rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    color: var(--light);
-    transition: var(--transition);
+body.light-mode .custom-accordion .accordion-button {
+    background-color: var(--lighter);
+    color: var(--darkest);
 }
 
-.theme-toggle.logo-replacement:hover {
+body.light-mode .custom-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--lighter);
     color: var(--primary);
-    transform: scale(1.1);
+}
+
+body.light-mode .custom-accordion .accordion-body {
+    background-color: var(--lighter);
+    color: var(--darkest);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .course-icon {
+    background-color: rgba(0, 240, 255, 0.15);
 }
 
 /* Estilos para os cards dos módulos Hackers do Bem */
@@ -931,3 +937,75 @@ body.light-mode .card-text {
     color: #666;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--darker);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}

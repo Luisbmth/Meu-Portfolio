@@ -1,4 +1,8 @@
-/* Tablet */
+/* ============================================
+   RESPONSIVIDADE - PORTFÓLIO LUIS FELIPE
+   ============================================ */
+
+/* Tablet (992px) */
 @media (max-width: 992px) {
     .hero-content {
         grid-template-columns: 1fr;
@@ -10,6 +14,11 @@
         margin: 0 auto;
     }
     
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .hero-buttons {
         justify-content: center;
     }
@@ -17,32 +26,71 @@
     .section-title {
         font-size: 3.5rem;
     }
-
+    
+    .nav-menu {
+        gap: 2rem;
     }
-
-.tech-icon.js {
-    margin-top: 3rem;
-    left: 7%;
-    color: #f7df1e;
-    animation-delay: 1s;
+    
+    /* Ajuste dos ícones tech para tablet */
+    .tech-icon.js {
+        top: 20%;
+        left: 5%;
+        right: auto;
+    }
+    
+    .tech-icon.react {
+        bottom: 5%;
+        right: 5%;
+        top: auto;
+    }
+    
+    .tech-icon.html {
+        top: 5%;
+        left: 55%;
+    }
+    
+    .tech-icon.css {
+        top: 70%;
+        left: 30%;
+    }
 }
 
-.tech-icon.react {
-    top: 100%;
-    right: 5%;
-    color: #61dafb;
-    animation-delay: 1.5s;
-}
-
-
-/* Mobile Grande */
+/* Mobile Grande (768px) */
 @media (max-width: 768px) {
+    /* Hamburger Menu */
     .hamburger {
         display: block;
+        position: relative;
+        width: 30px;
+        height: 24px;
+        margin-left: auto;
+        z-index: 1001;
+    }
+    
+    .hamburger .bar {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--light);
+        transition: var(--transition);
+    }
+    
+    .hamburger .bar:nth-child(1) {
+        top: 0;
+    }
+    
+    .hamburger .bar:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .hamburger .bar:nth-child(3) {
+        bottom: 0;
     }
     
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
     }
     
     .hamburger.active .bar:nth-child(2) {
@@ -50,86 +98,10 @@
     }
     
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
     
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background-color: var(--darkest);
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-        transition: var(--transition);
-        z-index: 999;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .hero-title {
-        font-size: 4.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 2.4rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-    
-    .accordion-button {
-        font-size: 1.4rem;
-    }
-}
-
-/* Mobile Pequeno */
-@media (max-width: 576px) {
-    .hero-buttons {
-        flex-direction: column;
-    }
-    
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .section-title {
-        font-size: 3rem;
-    }
-    
-    .section-subtitle {
-        font-size: 1.4rem;
-    }
-    
-    .skill-card, 
-    .project-card {
-        padding: 2rem;
-    }
-}
-
-
-
-/* Tablet (768px - 992px) */
-@media (max-width: 992px) {
-    .nav-menu {
-        gap: 2rem;
-    }
-}
-
-/* Mobile (até 768px) */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 24px;
-    }
-    
+    /* Menu Navegação */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -142,8 +114,8 @@
         align-items: center;
         gap: 3rem;
         padding: 8rem 2rem;
-        z-index: 1000;
         transition: var(--transition);
+        z-index: 1000;
     }
     
     .nav-menu.active {
@@ -163,15 +135,16 @@
     .nav-item:last-child {
         justify-content: center;
         margin-top: 2rem;
+        flex-direction: row;
     }
     
     .social-icon {
         font-size: 2rem;
     }
     
-    /* Ajuste para evitar conflito com o toggle */
+    /* Ajuste da navbar */
     .navbar {
-        justify-content: flex-start;
+        justify-content: space-between;
     }
     
     .theme-toggle.logo-replacement {
@@ -179,13 +152,84 @@
         margin-right: auto;
     }
     
-    .hamburger {
-        margin-left: auto;
+    /* Hero Section */
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2.4rem;
+    }
+    
+    .hero-description {
+        font-size: 1.4rem;
+    }
+    
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    /* Accordion */
+    .accordion-button {
+        font-size: 1.4rem;
+        padding: 1.2rem;
+    }
+    
+    .accordion-body {
+        padding: 1.5rem;
+    }
+    
+    /* Course Icon */
+    .course-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .course-icon i {
+        font-size: 1.8rem;
+    }
+    
+    /* Tech Icons */
+    .tech-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .tech-icon.js {
+        top: 15%;
+        left: 5%;
+        right: auto;
+    }
+    
+    .tech-icon.react {
+        bottom: 8%;
+        right: 3%;
+        top: auto;
+    }
+    
+    .tech-icon.html {
+        top: 8%;
+        left: 55%;
+    }
+    
+    .tech-icon.css {
+        top: 70%;
+        left: 25%;
     }
 }
 
-/* Mobile Pequeno (até 576px) */
+/* Mobile Pequeno (576px) */
 @media (max-width: 576px) {
+    /* Menu */
     .nav-menu {
         width: 80%;
     }
@@ -194,7 +238,188 @@
         font-size: 1.8rem;
     }
     
+    /* Header */
     .header {
         padding: 1.5rem 0;
+    }
+    
+    /* Hero */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .greeting {
+        font-size: 2rem;
+    }
+    
+    /* Sections */
+    .section-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    /* Cards */
+    .skill-card,
+    .project-card {
+        padding: 2rem;
+    }
+    
+    .skill-title {
+        font-size: 1.8rem;
+    }
+    
+    .skill-description {
+        font-size: 1.3rem;
+        min-height: auto;
+    }
+    
+    .project-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-description {
+        font-size: 1.3rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 1rem 1.8rem;
+        font-size: 1.4rem;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    /* Accordion */
+    .accordion-button {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 1rem;
+    }
+    
+    .course-icon {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .course-icon i {
+        font-size: 1.6rem;
+    }
+    
+    /* Tech Icons */
+    .tech-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.5rem;
+    }
+    
+    /* Container padding */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    /* Scroll down */
+    .scroll-wheel {
+        width: 18px;
+        height: 30px;
+    }
+}
+
+/* Mobile Extra Pequeno (400px) */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .tech-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1.3rem;
+    }
+    
+    .course-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .course-icon i {
+        font-size: 1.4rem;
+    }
+    
+    .accordion-button {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        font-size: 1.6rem;
+    }
+}
+
+/* Light Mode - Responsivo */
+body.light-mode .nav-menu {
+    background-color: var(--lighter);
+}
+
+body.light-mode .hamburger .bar {
+    background-color: var(--darkest);
+}
+
+/* Tablet Landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 10rem 0;
+    }
+    
+    .tech-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .nav-menu {
+        padding: 2rem 0;
+    }
+}
+
+/* Desktop Grande */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+    
+    .hero-title {
+        font-size: 7rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 3.5rem;
+    }
+    
+    .section-title {
+        font-size: 4.5rem;
     }
 }
