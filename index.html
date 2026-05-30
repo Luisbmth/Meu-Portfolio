@@ -1,648 +1,359 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Luis Felipe</title>
-    <meta name="description" content="Portfólio de Luis Felipe - Desenvolvedor Front-End especializado em React, JavaScript e interfaces modernas">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
-    
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Share+Tech&display=swap" rel="stylesheet">
-
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/resp.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Felipe — Dev Portfolio</title>
+  <meta name="description" content="Portfólio de Luis Felipe — Desenvolvedor Front-End especializado em React, JavaScript e interfaces modernas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/resp.css">
 </head>
-<body class="dark-mode">
-    <!-- Cursor Personalizado -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+<body>
+  <div class="cursor" id="cursor"></div>
 
-    <!-- Navbar -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <button id="theme-toggle" class="theme-toggle logo-replacement" type="button" aria-label="Alternar modo claro/escuro">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="#work" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="#courses" class="nav-link">Cursos</a></li>
-                    <li class="nav-item">
-                        <a href="https://github.com/Luisbmth" target="_blank" rel="noopener noreferrer" class="social-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-dot"></span>
+        <span>Luis Felipe</span>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home"     class="nav-link active">Home</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projetos</a>
+        <a href="security.html" class="nav-link nav-link--switch">
+          <i class="fas fa-shield-alt"></i> Segurança &amp; Certs
+        </a>
+      </nav>
+      <div class="nav-socials">
+        <a href="https://github.com/Luisbmth"   target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home"     class="mobile-link">Home</a>
+      <a href="#skills"   class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projetos</a>
+      <a href="security.html" class="mobile-link">Segurança &amp; Certificações</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="hero-inner">
+        <!-- TEXT SIDE -->
+        <div class="hero-text">
+          <div class="hero-eyebrow reveal">
+            <span class="eyebrow-dot"></span>
+            <span>Disponível para projetos</span>
+          </div>
+
+          <h1 class="hero-title reveal reveal--d1">
+            Olá, eu sou<br>
+            <em>Luis Felipe</em>
+          </h1>
+
+          <p class="hero-role reveal reveal--d2">
+            Desenvolvedor <span class="role-highlight">Front-End</span>
+          </p>
+
+          <p class="hero-desc reveal reveal--d3">
+            22 anos, apaixonado por tecnologia e inovação. Desenvolvo interfaces modernas com foco em performance e usabilidade, e construo expertise crescente em Cibersegurança.
+          </p>
+
+          <div class="hero-actions reveal reveal--d4">
+            <a href="#projects" class="btn btn--primary">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+            <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+              <i class="fas fa-paper-plane"></i> Contato
+            </a>
+          </div>
         </div>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h4 class="greeting">Olá, eu sou</h4>
-                        <h1 class="hero-title">Luis Felipe</h1>
-                        <h2 class="hero-subtitle">Desenvolvedor <span class="text-gradient">Front-End</span></h2>
-                        
-                        <p class="hero-description">
-                            Com 21 anos, sou um jovem profissional dedicado ao desenvolvimento de software e à inovação tecnológica. Minha trajetória na área de tecnologia começou cedo, impulsionada por uma forte curiosidade analítica e pelo desejo de compreender os sistemas digitais que permeiam nosso cotidiano.
-                        </p>
-                        
-                        <div class="hero-buttons">
-                            <a href="#work" class="btn btn-primary">
-                                Ver Projetos <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                <i class="fas fa-paper-plane"></i> Contato
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-image">
-                        <div class="image-wrapper">
-                            <div class="tech-stack">
-                                <div class="tech-icon react"><i class="fab fa-react"></i></div>
-                                <div class="tech-icon js"><i class="fab fa-js"></i></div>
-                                <div class="tech-icon html"><i class="fab fa-html5"></i></div>
-                                <div class="tech-icon css"><i class="fab fa-css3-alt"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="scroll-down">
-                    <a href="#skills" class="scroll-link">
-                        <span class="scroll-wheel"></span>
-                    </a>
-                </div>
+        <!-- AVATAR + FLOATING ICONS SIDE -->
+        <div class="hero-visual reveal reveal--d2">
+          <div class="avatar-wrap">
+            <!-- Imagem do avatar: substitua ./img/avatar.png pela sua foto -->
+            <div class="avatar-ring"></div>
+            <div class="avatar-placeholder">
+              <img src="./img/Luis_Felipe.jpeg" alt="Minha Foto" class="avatar-img">
             </div>
-        </section>
+          </div>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Minhas <span class="text-gradient">Habilidades</span></h2>
-                    <p class="section-subtitle">Tecnologias que domino e utilizo no meu dia a dia</p>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="fade-up">
-                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                        <h3 class="skill-title">HTML5</h3>
-                        <p class="skill-description">Estrutura semântica e acessível para todos os dispositivos</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 95%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                        <h3 class="skill-title">CSS3</h3>
-                        <p class="skill-description">Estilos criativos, animações e designs responsivos</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 90%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="skill-icon"><i class="fab fa-js"></i></div>
-                        <h3 class="skill-title">JavaScript</h3>
-                        <p class="skill-description">Lógica de programação e interatividade avançada</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 85%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="skill-icon"><i class="fab fa-react"></i></div>
-                        <h3 class="skill-title">React Native</h3>
-                        <p class="skill-description">Desenvolvimento mobile multiplataforma</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 60%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
-                        <h3 class="skill-title">Bootstrap</h3>
-                        <p class="skill-description">Desenvolvimento ágil com componentes prontos</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 75%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="skill-icon"><i class="fas fa-wind"></i></div>
-                        <h3 class="skill-title">Tailwind CSS</h3>
-                        <p class="skill-description">Utility-first CSS para designs rápidos e consistentes</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 75%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                        <h3 class="skill-title">Git</h3>
-                        <p class="skill-description">Controle de versão e trabalho em equipe</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 80%"></div></div>
-                    </div>
-                    
-                    <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
-                        <div class="skill-icon"><i class="fab fa-linux"></i></div>
-                        <h3 class="skill-title">Linux</h3>
-                        <p class="skill-description">Ambiente de desenvolvimento e servidores</p>
-                        <div class="skill-progress"><div class="progress-bar" style="width: 90%"></div></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="work" class="projects-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Meus <span class="text-gradient">Projetos</span></h2>
-                    <p class="section-subtitle">Alguns dos trabalhos que desenvolvi recentemente</p>
-                </div>
-                
-                <div class="projects-grid">
-                    <!-- Projeto 1 -->
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="./img/orblyCode.png" alt="Site OrblyCode">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://orblycode.com.br/" target="_blank" rel="noopener noreferrer" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="https://github.com/Luisbmth/orblycode" target="_blank" rel="noopener noreferrer" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Orbly Code</h3>
-                            <p class="project-description">Startup criada com meus amigos com o foco na criação de sites, sistemas e Apps.</p>
-                            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Projeto 2 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="project-image">
-                            <img src="./img/ygo.png" alt="Jogo Yu-Gi-Oh">
-                            <div class="project-overlay">
-                                <div class="project-links">                                    
-                                    <a href="https://github.com/Luisbmth/js-game-yugioh-jokenpo" target="_blank" rel="noopener noreferrer" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Yu-Gi-Oh Jokenpô</h3>
-                            <p class="project-description">Jogo de pedra, papel ou tesoura com cartas do Yu-Gi-Oh desenvolvido durante curso na Dio.</p>
-                            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Projeto 3 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="project-image">
-                            <img src="./img/TelaDiscord.png" alt="Clone Discord">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Luisbmth/Tela-Discord" target="_blank" rel="noopener noreferrer" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Clone Discord</h3>
-                            <p class="project-description">Clone da interface do Discord desenvolvido como desafio do curso da Dio.</p>
-                            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Projeto 4 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="project-image">
-                            <img src="./img/pokedex.png" alt="Pokédex">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Luisbmth/pokedex" target="_blank" rel="noopener noreferrer" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Pokédex</h3>
-                            <p class="project-description">Aplicação que consome a PokéAPI para listar e filtrar pokémons.</p>
-                            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">API</span></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Projeto 5 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="project-image">
-                            <img src="./img/Cafeteria.png" alt="Landing Page Cafeteria">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="https://github.com/Luisbmth/Cafeteria" target="_blank" rel="noopener noreferrer" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-title">Cafeteria</h3>
-                            <p class="project-description">Landing page para cafeteria local com design moderno e responsivo.</p>
-                            <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="more-projects" data-aos="fade-up">
-                    <a href="https://github.com/Luisbmth?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                        Ver mais projetos <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Courses Section -->
-        <section id="courses" class="courses-section py-5">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title display-4 fw-bold">Minhas <span class="text-gradient">Certificações</span></h2>
-                    <p class="section-subtitle">Conhecimento adquirido através de cursos e certificações</p>
-                </div>
-
-                <div class="accordion custom-accordion" id="coursesAccordion">
-                    <!-- Curso 1 - DIO Front-End -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fab fa-html5 fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Bootcamp Santander 2025 – Front-End</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2 text-muted"></i>
-                                    <p class="course-institution mb-0"><strong>Instituição:</strong> DIO (Digital Innovation One)</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2 text-muted"></i>
-                                    <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
-                                    <p class="course-description mb-0">Bootcamp completo com 102 horas focado em HTML, CSS e JavaScript, desenvolvendo projetos práticos.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="https://hermes.dio.me/certificates/GQL2K1IU.pdf" class="btn btn-primary btn-lg px-4 py-2" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-certificate me-2"></i> Ver Certificado
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 2 - Udemy Linux -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fab fa-linux fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Linux para Desenvolvedores+</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2 text-muted"></i>
-                                    <p class="course-institution mb-0"><strong>Instituição:</strong> Udemy</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2 text-muted"></i>
-                                    <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
-                                    <p class="course-description mb-0">Formação sobre terminal, shell scripting e ambientes LAMP.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="https://www.udemy.com/certificate/UC-3af9c1f5-0ff1-4800-9f6e-d4a3928b6f5c/" class="btn btn-primary btn-lg px-4 py-2" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-certificate me-2"></i> Ver Certificado
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 3 - Senac Front-End com IA -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="200">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fas fa-robot fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Programador Front-End com IA</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2 text-muted"></i>
-                                    <p class="course-institution mb-0"><strong>Instituição:</strong> Senac RJ</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2 text-muted"></i>
-                                    <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
-                                    <p class="course-description mb-0">Curso de 80h focado em HTML, CSS, JavaScript, React e IA.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="assets/certificados/LUIS%20FELIPE%20LEITE%20SANTOS-PROGRAMADOR%20FRONT-END%20COM%20IA%20-%20Certificado-VersaoImpressao.pdf" class="btn btn-primary btn-lg px-4 py-2" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-certificate me-2"></i> Ver Certificado
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 4 - Udemy LGPD -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="250">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fas fa-shield-alt fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">LGPD: Política de Privacidade e Proteção de Dados</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2 text-muted"></i>
-                                    <p class="course-institution mb-0"><strong>Instituição:</strong> Udemy</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2 text-muted"></i>
-                                    <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
-                                    <p class="course-description mb-0">Curso sobre LGPD, privacidade, compliance e governança de dados.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="https://www.udemy.com/certificate/UC-b115bb2a-4f89-4484-aa19-03bc582af520/" class="btn btn-primary btn-lg px-4 py-2" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-certificate me-2"></i> Ver Certificado
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 5 - Udemy Cyber Security -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fas fa-lock fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Curso Completo em Cyber Security</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2 text-muted"></i>
-                                    <p class="course-institution mb-0"><strong>Instituição:</strong> Udemy</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2 text-muted"></i>
-                                    <p class="course-date mb-0"><strong>Conclusão:</strong> 2025</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1 text-muted"></i>
-                                    <p class="course-description mb-0">Formação em Cibersegurança com foco em ataques, defesas e DevSecOps.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="https://www.udemy.com/certificate/UC-ad2d97c5-f6c3-4ffe-9617-f78f0c2161d4/" class="btn btn-primary btn-lg px-4 py-2" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-certificate me-2"></i> Ver Certificado
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 6 - Graduação -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                        <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fas fa-graduation-cap fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Bacharelado em Ciência da Computação</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2"></i>
-                                    <p class="mb-0"><strong>Instituição:</strong> Centro Universitário Anhanguera</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2"></i>
-                                    <p class="mb-0"><strong>Conclusão:</strong> Dezembro 2025</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1"></i>
-                                    <p class="mb-0">Graduação completa em Ciência da Computação.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="./assets/certificados/DiplomaDigital.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-file-pdf me-2"></i> Ver Diploma
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 7 - Pós-graduação -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="350">
-                        <h2 class="accordion-header" id="headingSeven">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fas fa-shield-alt fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Pós-graduação em Defesa Cibernética (Cursando)</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2"></i>
-                                    <p class="mb-0"><strong>Instituição:</strong> Centro Universitário Anhanguera</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2"></i>
-                                    <p class="mb-0"><strong>Previsão:</strong> 2026</p>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <i class="fas fa-info-circle me-2 mt-1"></i>
-                                    <p class="mb-0">Pós-graduação em Defesa Cibernética com 360 horas.</p>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="https://www.anhanguera.com/curso/pos-graduacao/defesa-cibernetica/" class="btn btn-primary me-3" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt me-2"></i> Saiba mais
-                                    </a>
-                                    <button class="btn btn-outline disabled" type="button" disabled>
-                                        <i class="fas fa-hourglass-half me-2"></i> Cursando
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 8 - Hackers do Bem -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="400">
-                        <h2 class="accordion-header" id="headingEight">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fas fa-user-shield fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Formação em Cibersegurança - Hackers do Bem</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2"></i>
-                                    <p class="mb-0"><strong>Instituição:</strong> Hackers do Bem</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2"></i>
-                                    <p class="mb-0"><strong>Conclusão:</strong> Janeiro 2026</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-clock me-2"></i>
-                                    <p class="mb-0"><strong>Carga Horária:</strong> 144 horas</p>
-                                </div>
-                                <div class="d-flex mb-4">
-                                    <i class="fas fa-info-circle me-2 mt-1"></i>
-                                    <p class="mb-0">Formação completa em cibersegurança com dois módulos.</p>
-                                </div>
-                                <div class="d-flex justify-content-end flex-wrap gap-3">
-                                    <a href="./assets/certificados/hackers-do-bem-nivelamento.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-certificate me-2"></i> Certificado Nivelamento
-                                    </a>
-                                    <a href="./assets/certificados/hackers-do-bem-basico.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-award me-2"></i> Certificado Básico
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Curso 9 - Google Cybersecurity -->
-                    <div class="accordion-item mb-4 border-0 rounded-4 overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="450">
-                        <h2 class="accordion-header" id="headingNine">
-                            <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                <div class="d-flex align-items-center w-100">
-                                    <div class="course-icon me-3"><i class="fab fa-google fa-2x"></i></div>
-                                    <div class="flex-grow-1"><h3 class="mb-0 fw-bold">Google Cybersecurity Certificate (Cursando)</h3></div>
-                                    <i class="fas fa-chevron-down ms-auto transition-all"></i>
-                                </div>
-                            </button>
-                        </h2>
-                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#coursesAccordion">
-                            <div class="accordion-body p-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-university me-2"></i>
-                                    <p class="mb-0"><strong>Instituição:</strong> Google (Coursera)</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="far fa-calendar-alt me-2"></i>
-                                    <p class="mb-0"><strong>Previsão:</strong> 2026</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-clock me-2"></i>
-                                    <p class="mb-0"><strong>Carga Horária:</strong> 180 horas</p>
-                                </div>
-                                <div class="d-flex justify-content-end flex-wrap gap-3">
-                                    <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt me-2"></i> Ver Programa
-                                    </a>
-                                    <button class="btn btn-outline disabled" type="button" disabled>
-                                        <i class="fas fa-hourglass-half me-2"></i> Cursando
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-column">
-                <div class="social-links">
-                    <a href="https://github.com/Luisbmth" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Luis Felipe. Todos os direitos reservados.</p>
-            </div>
+          <!-- Ícones flutuantes -->
+          <div class="float-icon float-icon--html"    style="--delay:0s">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="float-icon float-icon--css"     style="--delay:0.4s">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="float-icon float-icon--js"      style="--delay:0.8s">
+            <i class="fab fa-js"></i>
+          </div>
+          <div class="float-icon float-icon--react"   style="--delay:1.2s">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="float-icon float-icon--linux"   style="--delay:1.6s">
+            <i class="fab fa-linux"></i>
+          </div>
+          <div class="float-icon float-icon--git"     style="--delay:2s">
+            <i class="fab fa-git-alt"></i>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+      <!-- Scroll indicator -->
+      <div class="hero-scroll">
+        <div class="scroll-indicator"><div class="scroll-wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/scripts.js"></script>
+    <!-- ══ SKILLS ══ -->
+    <section id="skills" class="skills">
+      <div class="section-container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>Habilidades</span>
+        </div>
+        <h2 class="section-title">O que eu domino</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap html"><i class="fab fa-html5"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">HTML5</h3>
+                <p class="skill-sub">Estrutura semântica e acessível</p>
+              </div>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap css"><i class="fab fa-css3-alt"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">CSS3</h3>
+                <p class="skill-sub">Animações e design responsivo</p>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap js"><i class="fab fa-js"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">JavaScript</h3>
+                <p class="skill-sub">Lógica e interatividade avançada</p>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap react"><i class="fab fa-react"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">React Native</h3>
+                <p class="skill-sub">Desenvolvimento mobile multiplataforma</p>
+              </div>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="60"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap tw"><i class="fas fa-wind"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">Tailwind CSS</h3>
+                <p class="skill-sub">Utility-first, designs rápidos</p>
+              </div>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap bs"><i class="fab fa-bootstrap"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">Bootstrap</h3>
+                <p class="skill-sub">Desenvolvimento ágil com componentes</p>
+              </div>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap git"><i class="fab fa-git-alt"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">Git</h3>
+                <p class="skill-sub">Controle de versão e colaboração</p>
+              </div>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon-wrap linux"><i class="fab fa-linux"></i></div>
+              <div class="skill-info">
+                <h3 class="skill-name">Linux</h3>
+                <p class="skill-sub">Ambiente de desenvolvimento e servidores</p>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROJECTS ══ -->
+    <section id="projects" class="projects">
+      <div class="section-container">
+        <div class="section-label">
+          <span class="label-line"></span>
+          <span>Projetos</span>
+        </div>
+        <h2 class="section-title">Trabalhos recentes</h2>
+
+        <div class="projects-grid">
+
+          <div class="project-card project-card--featured">
+            <div class="project-img">
+              <img src="./img/orblyCode.png" alt="Site OrblyCode" loading="lazy">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://orblycode.com.br/"                  target="_blank" rel="noopener noreferrer" class="plink" title="Ver site"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/Luisbmth/orblycode"       target="_blank" rel="noopener noreferrer" class="plink" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">01</div>
+              <h3 class="project-title">Orbly Code</h3>
+              <p class="project-desc">Startup criada com amigos com foco na criação de sites, sistemas e apps.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./img/ygo.png" alt="Jogo Yu-Gi-Oh" loading="lazy">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Luisbmth/js-game-yugioh-jokenpo" target="_blank" rel="noopener noreferrer" class="plink"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">02</div>
+              <h3 class="project-title">Yu-Gi-Oh Jokenpô</h3>
+              <p class="project-desc">Jogo de pedra, papel ou tesoura com cartas do Yu-Gi-Oh desenvolvido na DIO.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./img/TelaDiscord.png" alt="Clone Discord" loading="lazy">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Luisbmth/Tela-Discord" target="_blank" rel="noopener noreferrer" class="plink"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">03</div>
+              <h3 class="project-title">Clone Discord</h3>
+              <p class="project-desc">Clone da interface do Discord como desafio do curso da DIO.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./img/Captura de tela 2025-08-14 133526.png" alt="Pokédex" loading="lazy">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Luisbmth/pokedex" target="_blank" rel="noopener noreferrer" class="plink"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">04</div>
+              <h3 class="project-title">Pokédex</h3>
+              <p class="project-desc">Aplicação que consome a PokéAPI para listar e filtrar pokémons.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-img">
+              <img src="./img/Cafeteria.png" alt="Landing Page Cafeteria" loading="lazy">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/Luisbmth/Cafeteria" target="_blank" rel="noopener noreferrer" class="plink"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-num">05</div>
+              <h3 class="project-title">Cafeteria</h3>
+              <p class="project-desc">Landing page para cafeteria local com design moderno e responsivo.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="more-link">
+          <a href="https://github.com/Luisbmth?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+            Ver todos no GitHub <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-name">Luis Felipe</p>
+      <div class="footer-links">
+        <a href="https://github.com/Luisbmth"  target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 Luis Felipe. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-top" id="backTop" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+  <script src="./js/scripts.js"></script>
 </body>
 </html>

@@ -1,425 +1,181 @@
 /* ============================================
-   RESPONSIVIDADE - PORTFÓLIO LUIS FELIPE
+   LUIS FELIPE — PORTFOLIO
+   resp.css  |  Responsividade
    ============================================ */
 
-/* Tablet (992px) */
-@media (max-width: 992px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .hero-text {
-        text-align: center;
-        margin: 0 auto;
-    }
-    
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .section-title {
-        font-size: 3.5rem;
-    }
-    
-    .nav-menu {
-        gap: 2rem;
-    }
-    
-    /* Ajuste dos ícones tech para tablet */
-    .tech-icon.js {
-        top: 20%;
-        left: 5%;
-        right: auto;
-    }
-    
-    .tech-icon.react {
-        bottom: 5%;
-        right: 5%;
-        top: auto;
-    }
-    
-    .tech-icon.html {
-        top: 5%;
-        left: 55%;
-    }
-    
-    .tech-icon.css {
-        top: 70%;
-        left: 30%;
-    }
+/* ────────────────────────────────────────────
+   1440px — wide desktops (apenas ajustes finos)
+   ──────────────────────────────────────────── */
+@media (min-width: 1440px) {
+  .hero-inner  { gap: 8rem; }
+  .hero-visual { height: 480px; }
+  .avatar-wrap, .avatar-placeholder, .avatar-photo { width: 240px; height: 240px; }
+  .float-icon  { width: 58px; height: 58px; font-size: 2.4rem; }
 }
 
-/* Mobile Grande (768px) */
-@media (max-width: 768px) {
-    /* Hamburger Menu */
-    .hamburger {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 24px;
-        margin-left: auto;
-        z-index: 1001;
-    }
-    
-    .hamburger .bar {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: var(--light);
-        transition: var(--transition);
-    }
-    
-    .hamburger .bar:nth-child(1) {
-        top: 0;
-    }
-    
-    .hamburger .bar:nth-child(2) {
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .hamburger .bar:nth-child(3) {
-        bottom: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-    
-    /* Menu Navegação */
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: var(--darkest);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        padding: 8rem 2rem;
-        transition: var(--transition);
-        z-index: 1000;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-link {
-        font-size: 2rem;
-        display: block;
-    }
-    
-    .nav-item:last-child {
-        justify-content: center;
-        margin-top: 2rem;
-        flex-direction: row;
-    }
-    
-    .social-icon {
-        font-size: 2rem;
-    }
-    
-    /* Ajuste da navbar */
-    .navbar {
-        justify-content: space-between;
-    }
-    
-    .theme-toggle.logo-replacement {
-        order: -1;
-        margin-right: auto;
-    }
-    
-    /* Hero Section */
-    .hero-title {
-        font-size: 4.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 2.4rem;
-    }
-    
-    .hero-description {
-        font-size: 1.4rem;
-    }
-    
-    /* Projects Grid */
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-    
-    /* Skills Grid */
-    .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-    
-    /* Accordion */
-    .accordion-button {
-        font-size: 1.4rem;
-        padding: 1.2rem;
-    }
-    
-    .accordion-body {
-        padding: 1.5rem;
-    }
-    
-    /* Course Icon */
-    .course-icon {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .course-icon i {
-        font-size: 1.8rem;
-    }
-    
-    /* Tech Icons */
-    .tech-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.8rem;
-    }
-    
-    .tech-icon.js {
-        top: 15%;
-        left: 5%;
-        right: auto;
-    }
-    
-    .tech-icon.react {
-        bottom: 8%;
-        right: 3%;
-        top: auto;
-    }
-    
-    .tech-icon.html {
-        top: 8%;
-        left: 55%;
-    }
-    
-    .tech-icon.css {
-        top: 70%;
-        left: 25%;
-    }
+/* ────────────────────────────────────────────
+   1100px — laptops padrão
+   ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .hero-inner { gap: 4rem; }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-card--featured { grid-column: span 2; }
+
+  .skills-grid { grid-template-columns: 1fr; }
 }
 
-/* Mobile Pequeno (576px) */
-@media (max-width: 576px) {
-    /* Menu */
-    .nav-menu {
-        width: 80%;
-    }
-    
-    .nav-link {
-        font-size: 1.8rem;
-    }
-    
-    /* Header */
-    .header {
-        padding: 1.5rem 0;
-    }
-    
-    /* Hero */
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    
-    .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 2rem;
-    }
-    
-    .greeting {
-        font-size: 2rem;
-    }
-    
-    /* Sections */
-    .section-title {
-        font-size: 2.8rem;
-    }
-    
-    .section-subtitle {
-        font-size: 1.4rem;
-    }
-    
-    /* Cards */
-    .skill-card,
-    .project-card {
-        padding: 2rem;
-    }
-    
-    .skill-title {
-        font-size: 1.8rem;
-    }
-    
-    .skill-description {
-        font-size: 1.3rem;
-        min-height: auto;
-    }
-    
-    .project-title {
-        font-size: 1.8rem;
-    }
-    
-    .project-description {
-        font-size: 1.3rem;
-    }
-    
-    /* Buttons */
-    .btn {
-        padding: 1rem 1.8rem;
-        font-size: 1.4rem;
-        width: 100%;
-        max-width: 250px;
-    }
-    
-    /* Accordion */
-    .accordion-button {
-        font-size: 1.3rem;
-        padding: 1rem;
-    }
-    
-    .accordion-body {
-        padding: 1rem;
-    }
-    
-    .course-icon {
-        width: 38px;
-        height: 38px;
-    }
-    
-    .course-icon i {
-        font-size: 1.6rem;
-    }
-    
-    /* Tech Icons */
-    .tech-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 1.5rem;
-    }
-    
-    /* Container padding */
-    .container {
-        padding: 0 1.5rem;
-    }
-    
-    /* Scroll down */
-    .scroll-wheel {
-        width: 18px;
-        height: 30px;
-    }
+/* ────────────────────────────────────────────
+   900px — tablets landscape / laptops pequenos
+   ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* Nav — esconde links, mostra hamburger */
+  .nav-links  { display: none; }
+  .nav-socials{ display: none; }
+  .hamburger  { display: flex; }
+
+  /* Hero — empilha em coluna */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 4.4rem;
+  }
+  .hero-text  { max-width: 100%; }
+  .hero-desc  { max-width: 100%; margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-eyebrow { margin-left: auto; margin-right: auto; }
+
+  /* Visual — reduz */
+  .hero-visual { height: 360px; }
+  .avatar-wrap, .avatar-placeholder, .avatar-photo { width: 180px; height: 180px; }
+
+  /* Float icons reposicionados para caber em coluna */
+  .float-icon--html  { top: 6%;   left: 4%; }
+  .float-icon--css   { top: 52%;  left: 2%; }
+  .float-icon--js    { top: 6%;   right: 4%; }
+  .float-icon--react { top: 52%;  right: 2%; }
+  .float-icon--linux { bottom: 2%; left: 24%; }
+  .float-icon--git   { bottom: 2%; right: 24%; }
+
+  .float-icon--shield { top: 6%;   left: 4%; }
+  .float-icon--lock   { top: 52%;  left: 2%; }
+  .float-icon--google { top: 6%;   right: 4%; }
+  .float-icon--eye    { top: 52%;  right: 2%; }
+  .float-icon--code   { bottom: 2%; left: 24%; }
+
+  /* Stats segurança */
+  .sec-stats { gap: 1.2rem; }
+  .stat-chip { min-width: 110px; padding: 1.6rem 2rem; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card--featured { grid-column: span 1; }
 }
 
-/* Mobile Extra Pequeno (400px) */
-@media (max-width: 400px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.8rem;
-    }
-    
-    .section-title {
-        font-size: 2.5rem;
-    }
-    
-    .tech-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 1.3rem;
-    }
-    
-    .course-icon {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .course-icon i {
-        font-size: 1.4rem;
-    }
-    
-    .accordion-button {
-        font-size: 1.2rem;
-    }
-    
-    .nav-link {
-        font-size: 1.6rem;
-    }
+/* ────────────────────────────────────────────
+   680px — tablets portrait
+   ──────────────────────────────────────────── */
+@media (max-width: 680px) {
+  /* Section padding menor */
+  .section-container { padding: 8rem 2rem; }
+
+  /* Hero */
+  .hero { padding: 10rem 2rem 7rem; }
+  .hero-title { font-size: clamp(4rem, 11vw, 6rem); }
+  .hero-visual { height: 320px; }
+  .avatar-wrap, .avatar-placeholder, .avatar-photo { width: 160px; height: 160px; }
+  .avatar-placeholder { font-size: 5.5rem; }
+  .float-icon { width: 46px; height: 46px; font-size: 1.9rem; border-radius: 12px; }
+
+  /* Stats */
+  .sec-stats { gap: 1rem; }
+  .stat-chip  { min-width: 100px; padding: 1.4rem 1.6rem; }
+  .stat-n     { font-size: 2.8rem; }
+
+  /* Certifications — empilha ícone e ação */
+  .cert-card { flex-direction: column; gap: 1.6rem; }
+  .cert-action { flex-direction: row; flex-wrap: wrap; align-self: flex-start; gap: .8rem; }
+
+  /* Education timeline — grid menor */
+  .edu-card { gap: 1.6rem; }
+  .edu-icon { width: 44px; height: 44px; font-size: 1.7rem; }
+  .edu-title { font-size: 1.8rem; }
+
+  /* Section title */
+  .section-title { font-size: clamp(2.6rem, 6vw, 4rem); margin-bottom: 4rem; }
+
+  /* Header */
+  .nav-container { padding: 0 2rem; }
 }
 
-/* Light Mode - Responsivo */
-body.light-mode .nav-menu {
-    background-color: var(--lighter);
+/* ────────────────────────────────────────────
+   480px — smartphones grandes
+   ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  html { font-size: 58%; }
+
+  .hero { padding: 9rem 1.6rem 6rem; }
+  .hero-title { font-size: clamp(3.6rem, 12vw, 5.2rem); }
+  .hero-role  { font-size: 1.7rem; }
+  .hero-desc  { font-size: 1.5rem; }
+
+  /* Botões — full width */
+  .hero-actions { flex-direction: column; align-items: center; gap: 1rem; }
+  .btn { width: 100%; max-width: 300px; justify-content: center; }
+
+  /* Visual */
+  .hero-visual { height: 290px; }
+  .avatar-wrap, .avatar-placeholder, .avatar-photo { width: 140px; height: 140px; }
+  .avatar-placeholder { font-size: 4.8rem; }
+  .float-icon { width: 40px; height: 40px; font-size: 1.6rem; border-radius: 10px; }
+
+  /* Stats */
+  .sec-stats  { flex-direction: row; justify-content: center; }
+  .stat-chip  { flex: 1; min-width: 80px; padding: 1.2rem 1rem; }
+  .stat-n     { font-size: 2.4rem; }
+
+  /* Skills */
+  .skill-header { flex-wrap: wrap; gap: 1.2rem; }
+  .skill-pct    { margin-left: auto; }
+
+  /* Cert action — empilha verticalmente */
+  .cert-action { flex-direction: column; }
+  .cert-btn    { width: 100%; justify-content: center; }
+
+  /* Education — remove linha da timeline */
+  .edu-line { display: none; }
+
+  /* Projects */
+  .project-body { padding: 1.6rem 1.8rem 2rem; }
+
+  /* Footer */
+  .footer { padding: 3rem 1.6rem; }
 }
 
-body.light-mode .hamburger .bar {
-    background-color: var(--darkest);
+/* ────────────────────────────────────────────
+   360px — smartphones pequenos
+   ──────────────────────────────────────────── */
+@media (max-width: 360px) {
+  html { font-size: 54%; }
+
+  .hero-visual { height: 260px; }
+  .avatar-wrap, .avatar-placeholder, .avatar-photo { width: 120px; height: 120px; }
+  .float-icon { width: 36px; height: 36px; font-size: 1.4rem; }
+
+  .stat-chip { min-width: 70px; }
+  .stat-n    { font-size: 2rem; }
+
+  .section-container { padding: 6rem 1.4rem; }
 }
 
-/* Tablet Landscape */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .hero {
-        min-height: auto;
-        padding: 10rem 0;
-    }
-    
-    .tech-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.8rem;
-    }
-    
-    .nav-menu {
-        padding: 2rem 0;
-    }
-}
-
-/* Desktop Grande */
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1300px;
-    }
-    
-    .hero-title {
-        font-size: 7rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 3.5rem;
-    }
-    
-    .section-title {
-        font-size: 4.5rem;
-    }
+/* ────────────────────────────────────────────
+   Landscape em altura baixa (ex: iPhone landscape)
+   ──────────────────────────────────────────── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: unset; padding: 8rem 2.4rem 4rem; }
+  .hero-scroll { display: none; }
+  .hero-visual { height: 260px; }
 }

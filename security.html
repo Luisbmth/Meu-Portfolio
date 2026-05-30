@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Felipe — Segurança & Certificações</title>
+  <meta name="description" content="Certificações e formações em Cibersegurança de Luis Felipe">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/resp.css">
+</head>
+<body class="page--security">
+  <div class="cursor" id="cursor"></div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-dot logo-dot--sec"></span>
+        <span>Luis Felipe</span>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link nav-link--switch">
+          <i class="fas fa-code"></i> Dev Portfolio
+        </a>
+        <a href="#home"      class="nav-link active">Apresentação</a>
+        <a href="#certs"     class="nav-link">Certificações</a>
+        <a href="#education" class="nav-link">Formação</a>
+      </nav>
+      <div class="nav-socials">
+        <a href="https://github.com/Luisbmth"  target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html"   class="mobile-link">Dev Portfolio</a>
+      <a href="#home"        class="mobile-link">Apresentação</a>
+      <a href="#certs"       class="mobile-link">Certificações</a>
+      <a href="#education"   class="mobile-link">Formação</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══ HERO SECURITY ══ -->
+    <section id="home" class="hero hero--sec">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb--sec1"></div>
+        <div class="hero-orb hero-orb--sec2"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="hero-inner">
+        <!-- TEXT SIDE -->
+        <div class="hero-text">
+          <div class="hero-eyebrow reveal">
+            <span class="eyebrow-dot eyebrow-dot--sec"></span>
+            <span>Segurança &amp; Certificações</span>
+          </div>
+
+          <h1 class="hero-title reveal reveal--d1">
+            Olá, eu sou<br>
+            <em>Luis Felipe</em>
+          </h1>
+
+          <p class="hero-role reveal reveal--d2">
+            Dev Front-End &amp; <span class="role-highlight">Cibersegurança</span>
+          </p>
+
+          <p class="hero-desc reveal reveal--d3">
+            Além do desenvolvimento web, estou constuindo uma carreira em Cibersegurança cursando pós-graduação em Defesa Cibernética e atualmente trabalho na área de infraestrutura de redes da Fundação municipal de Niterói.
+          </p>
+
+          <div class="hero-actions reveal reveal--d4">
+            <a href="#certs" class="btn btn--sec">Ver Certificações <i class="fas fa-shield-alt"></i></a>
+            <a href="index.html" class="btn btn--ghost">
+              <i class="fas fa-code"></i> Dev Portfolio
+            </a>
+          </div>
+        </div>
+
+        <!-- AVATAR + FLOATING ICONS SIDE -->
+        <div class="hero-visual reveal reveal--d2">
+          <div class="avatar-wrap">
+            <div class="avatar-ring avatar-ring--sec"></div>
+            <div class="avatar-placeholder">
+              <img src="./img/Luis_Felipe.jpeg" alt="Minha Foto" class="avatar-img">
+            </div>
+          </div>
+
+          <!-- Ícones flutuantes — segurança -->
+          <div class="float-icon float-icon--shield" style="--delay:0s">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="float-icon float-icon--lock" style="--delay:0.5s">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="float-icon float-icon--linux" style="--delay:1s">
+            <i class="fab fa-linux"></i>
+          </div>
+          <div class="float-icon float-icon--google" style="--delay:1.5s">
+            <i class="fab fa-google"></i>
+          </div>
+          <div class="float-icon float-icon--eye" style="--delay:2s">
+            <i class="fas fa-eye"></i>
+          </div>
+          <div class="float-icon float-icon--code" style="--delay:2.5s">
+            <i class="fas fa-terminal"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="sec-stats reveal reveal--d5">
+        <div class="stat-chip">
+          <span class="stat-n">400<span class="stat-plus">+</span></span>
+          <span class="stat-l">horas de formação</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-n">6</span>
+          <span class="stat-l">certificações concluídas</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-n">2</span>
+          <span class="stat-l">cursando agora</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-n">360h</span>
+          <span class="stat-l">pós-graduação</span>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-indicator"><div class="scroll-wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══ CERTIFICAÇÕES ══ -->
+    <section id="certs" class="certs">
+      <div class="section-container">
+        <div class="section-label section-label--sec">
+          <span class="label-line label-line--sec"></span>
+          <span>Certificações</span>
+        </div>
+        <h2 class="section-title">Cursos &amp; Certificados</h2>
+
+        <div class="cert-list">
+
+          <!-- DIO Bootcamp -->
+          <div class="cert-card">
+            <div class="cert-icon cert-icon--dev"><i class="fab fa-html5"></i></div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-tag cert-tag--done">Concluído</span>
+                <span class="cert-year">2025 &middot; DIO · 102h</span>
+              </div>
+              <h3 class="cert-title">Bootcamp Santander 2025 – Front-End</h3>
+              <p class="cert-desc">Bootcamp completo focado em HTML, CSS e JavaScript, com projetos práticos e metodologia hands-on.</p>
+            </div>
+            <div class="cert-action">
+              <a href="https://hermes.dio.me/certificates/GQL2K1IU.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-certificate"></i> Ver Certificado
+              </a>
+            </div>
+          </div>
+
+          <!-- Linux Udemy -->
+          <div class="cert-card">
+            <div class="cert-icon cert-icon--linux"><i class="fab fa-linux"></i></div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-tag cert-tag--done">Concluído</span>
+                <span class="cert-year">2025 &middot; Udemy</span>
+              </div>
+              <h3 class="cert-title">Linux para Desenvolvedores+</h3>
+              <p class="cert-desc">Formação sobre terminal, shell scripting e ambientes LAMP para desenvolvimento e servidores.</p>
+            </div>
+            <div class="cert-action">
+              <a href="https://www.udemy.com/certificate/UC-3af9c1f5-0ff1-4800-9f6e-d4a3928b6f5c/" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-certificate"></i> Ver Certificado
+              </a>
+            </div>
+          </div>
+
+          <!-- Senac IA -->
+          <div class="cert-card">
+            <div class="cert-icon cert-icon--ai"><i class="fas fa-robot"></i></div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-tag cert-tag--done">Concluído</span>
+                <span class="cert-year">2025 &middot; Senac RJ · 80h</span>
+              </div>
+              <h3 class="cert-title">Programador Front-End com IA</h3>
+              <p class="cert-desc">Curso focado em HTML, CSS, JavaScript, React e Inteligência Artificial aplicada ao desenvolvimento web.</p>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificados/LUIS%20FELIPE%20LEITE%20SANTOS-PROGRAMADOR%20FRONT-END%20COM%20IA%20-%20Certificado-VersaoImpressao.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-certificate"></i> Ver Certificado
+              </a>
+            </div>
+          </div>
+
+          <!-- LGPD -->
+          <div class="cert-card">
+            <div class="cert-icon cert-icon--sec"><i class="fas fa-shield-alt"></i></div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-tag cert-tag--done">Concluído</span>
+                <span class="cert-year">2025 &middot; Udemy</span>
+              </div>
+              <h3 class="cert-title">LGPD: Privacidade e Proteção de Dados</h3>
+              <p class="cert-desc">Curso sobre LGPD, privacidade, compliance e governança de dados pessoais.</p>
+            </div>
+            <div class="cert-action">
+              <a href="https://www.udemy.com/certificate/UC-b115bb2a-4f89-4484-aa19-03bc582af520/" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-certificate"></i> Ver Certificado
+              </a>
+            </div>
+          </div>
+
+          <!-- Cyber Security Udemy -->
+          <div class="cert-card">
+            <div class="cert-icon cert-icon--sec"><i class="fas fa-lock"></i></div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-tag cert-tag--done">Concluído</span>
+                <span class="cert-year">2025 &middot; Udemy</span>
+              </div>
+              <h3 class="cert-title">Curso Completo em Cyber Security</h3>
+              <p class="cert-desc">Formação em Cibersegurança com foco em ataques, defesas e DevSecOps.</p>
+            </div>
+            <div class="cert-action">
+              <a href="https://www.udemy.com/certificate/UC-ad2d97c5-f6c3-4ffe-9617-f78f0c2161d4/" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-certificate"></i> Ver Certificado
+              </a>
+            </div>
+          </div>
+
+          <!-- Hackers do Bem — destacado -->
+          <div class="cert-card cert-card--highlight">
+            <div class="cert-icon cert-icon--hdb"><i class="fas fa-user-shield"></i></div>
+            <div class="cert-body">
+              <div class="cert-meta">
+                <span class="cert-tag cert-tag--done">Concluído</span>
+                <span class="cert-year">Jan 2026 &middot; Hackers do Bem · 144h</span>
+              </div>
+              <h3 class="cert-title">Formação em Cibersegurança — Hackers do Bem</h3>
+              <p class="cert-desc">Formação completa com dois módulos: Nivelamento e Básico. 144 horas de conteúdo técnico de cibersegurança.</p>
+            </div>
+            <div class="cert-action cert-action--multi">
+              <a href="./assets/certificados/Certificado_-_Nivelamento.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-certificate"></i> Certificado de Nivelamento
+              </a>
+              <a href="./assets/certificados/Certificado_-_Basico.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn--ghost">
+                <i class="fas fa-award"></i> Certificado de nível básico
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FORMAÇÃO ══ -->
+    <section id="education" class="education">
+      <div class="section-container">
+        <div class="section-label section-label--sec">
+          <span class="label-line label-line--sec"></span>
+          <span>Formação Acadêmica</span>
+        </div>
+        <h2 class="section-title">Graduação &amp; Pós</h2>
+
+        <div class="edu-timeline">
+
+          <!-- Bacharelado -->
+          <div class="edu-card">
+            <div class="edu-left">
+              <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="edu-line"></div>
+            </div>
+            <div class="edu-content">
+              <div class="edu-badge">Concluído · Dez 2025</div>
+              <h3 class="edu-title">Bacharelado em Ciência da Computação</h3>
+              <p class="edu-inst">Centro Universitário Anhanguera</p>
+              <p class="edu-desc">Graduação completa com base sólida em algoritmos, estruturas de dados, redes e sistemas operacionais.</p>
+              <a href="./assets/certificados/DiplomaDigital.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn">
+                <i class="fas fa-file-pdf"></i> Ver Diploma
+              </a>
+            </div>
+          </div>
+
+          <!-- Pós Defesa Cibernética -->
+          <div class="edu-card">
+            <div class="edu-left">
+              <div class="edu-icon edu-icon--progress"><i class="fas fa-shield-alt"></i></div>
+              <div class="edu-line"></div>
+            </div>
+            <div class="edu-content">
+              <div class="edu-badge edu-badge--progress">
+                <span class="badge-pulse"></span> Cursando · Previsão 2026
+              </div>
+              <h3 class="edu-title">Pós-graduação em Defesa Cibernética</h3>
+              <p class="edu-inst">Centro Universitário Anhanguera · 360h</p>
+              <p class="edu-desc">Especialização em defesa cibernética cobrindo segurança ofensiva, defensiva, incident response e conformidade regulatória.</p>
+              <a href="https://www.anhanguera.com/curso/pos-graduacao/defesa-cibernetica/" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn--ghost">
+                <i class="fas fa-external-link-alt"></i> Saiba mais
+              </a>
+            </div>
+          </div>
+
+          <!-- Google Cybersecurity -->
+          <div class="edu-card">
+            <div class="edu-left">
+              <div class="edu-icon edu-icon--progress edu-icon--google"><i class="fab fa-google"></i></div>
+              <!-- sem linha no último item -->
+            </div>
+            <div class="edu-content">
+              <div class="edu-badge edu-badge--progress">
+                <span class="badge-pulse"></span> Cursando · Previsão 2026
+              </div>
+              <h3 class="edu-title">Google Cybersecurity Certificate</h3>
+              <p class="edu-inst">Google via Coursera · 180h</p>
+              <p class="edu-desc">Certificação profissional do Google cobrindo fundamentos de segurança, gestão de riscos, redes, ferramentas SIEM e resposta a incidentes.</p>
+              <a href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" rel="noopener noreferrer" class="cert-btn cert-btn--ghost">
+                <i class="fas fa-external-link-alt"></i> Ver Programa
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-name">Luis Felipe</p>
+      <div class="footer-links">
+        <a href="https://github.com/Luisbmth"  target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/luis-felipe-371638280/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 Luis Felipe. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-top" id="backTop" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+  <script src="./js/scripts.js"></script>
+</body>
+</html>
