@@ -538,11 +538,6 @@ img { max-width: 100%; display: block; }
   transition: border-color .3s, transform .25s var(--ease);
 }
 .cert-card:hover { border-color: var(--border-hover); transform: translateX(5px); }
-.cert-card--highlight {
-  border-color: rgba(0,255,136,.2);
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(0,255,136,.04) 100%);
-}
-.cert-card--highlight:hover { border-color: rgba(0,255,136,.38); }
 
 .cert-icon {
   width: 50px; height: 50px; border-radius: var(--radius-sm); flex-shrink: 0;
