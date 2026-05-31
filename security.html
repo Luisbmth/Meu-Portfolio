@@ -26,9 +26,10 @@
         <a href="index.html" class="nav-link nav-link--switch">
           <i class="fas fa-code"></i> Dev Portfolio
         </a>
-        <a href="#home"      class="nav-link active">Apresentação</a>
-        <a href="#certs"     class="nav-link">Certificações</a>
-        <a href="#education" class="nav-link">Formação</a>
+        <a href="#home"        class="nav-link active">Apresentação</a>
+        <a href="#sec-tools"   class="nav-link">Ferramentas</a>
+        <a href="#certs"       class="nav-link">Certificações</a>
+        <a href="#education"   class="nav-link">Formação</a>
       </nav>
       <div class="nav-socials">
         <a href="https://github.com/Luisbmth"  target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -41,6 +42,7 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html"   class="mobile-link">Dev Portfolio</a>
       <a href="#home"        class="mobile-link">Apresentação</a>
+      <a href="#sec-tools"   class="mobile-link">Ferramentas</a>
       <a href="#certs"       class="mobile-link">Certificações</a>
       <a href="#education"   class="mobile-link">Formação</a>
     </div>
@@ -56,7 +58,6 @@
       </div>
 
       <div class="hero-inner">
-        <!-- TEXT SIDE -->
         <div class="hero-text">
           <div class="hero-eyebrow reveal">
             <span class="eyebrow-dot eyebrow-dot--sec"></span>
@@ -73,18 +74,17 @@
           </p>
 
           <p class="hero-desc reveal reveal--d3">
-            Além do desenvolvimento web, estou constuindo uma carreira em Cibersegurança cursando pós-graduação em Defesa Cibernética e atualmente trabalho na área de infraestrutura de redes da Fundação Municipal de Educação de Niterói.
+            Além do desenvolvimento web, estou construindo uma carreira em Cibersegurança cursando pós-graduação em Defesa Cibernética e atualmente trabalho na área de infraestrutura de redes da Fundação Municipal de Educação de Niterói.
           </p>
 
           <div class="hero-actions reveal reveal--d4">
-            <a href="#certs" class="btn btn--sec">Ver Certificações <i class="fas fa-shield-alt"></i></a>
+            <a href="#sec-tools" class="btn btn--sec">Ver Ferramentas <i class="fas fa-shield-alt"></i></a>
             <a href="index.html" class="btn btn--ghost">
               <i class="fas fa-code"></i> Dev Portfolio
             </a>
           </div>
         </div>
 
-        <!-- AVATAR + FLOATING ICONS SIDE -->
         <div class="hero-visual reveal reveal--d2">
           <div class="avatar-wrap">
             <div class="avatar-ring avatar-ring--sec"></div>
@@ -93,25 +93,12 @@
             </div>
           </div>
 
-          <!-- Ícones flutuantes — segurança -->
-          <div class="float-icon float-icon--shield" style="--delay:0s">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <div class="float-icon float-icon--lock" style="--delay:0.5s">
-            <i class="fas fa-lock"></i>
-          </div>
-          <div class="float-icon float-icon--linux" style="--delay:1s">
-            <i class="fab fa-linux"></i>
-          </div>
-          <div class="float-icon float-icon--google" style="--delay:1.5s">
-            <i class="fab fa-google"></i>
-          </div>
-          <div class="float-icon float-icon--eye" style="--delay:2s">
-            <i class="fas fa-eye"></i>
-          </div>
-          <div class="float-icon float-icon--code" style="--delay:2.5s">
-            <i class="fas fa-terminal"></i>
-          </div>
+          <div class="float-icon float-icon--shield" style="--delay:0s">  <i class="fas fa-shield-alt"></i></div>
+          <div class="float-icon float-icon--lock"   style="--delay:0.5s"><i class="fas fa-lock"></i></div>
+          <div class="float-icon float-icon--linux"  style="--delay:1s">  <i class="fab fa-linux"></i></div>
+          <div class="float-icon float-icon--google" style="--delay:1.5s"><i class="fab fa-google"></i></div>
+          <div class="float-icon float-icon--eye"    style="--delay:2s">  <i class="fas fa-eye"></i></div>
+          <div class="float-icon float-icon--code"   style="--delay:2.5s"><i class="fas fa-terminal"></i></div>
         </div>
       </div>
 
@@ -141,6 +128,101 @@
       </div>
     </section>
 
+    <!-- ══ FERRAMENTAS DE SEGURANÇA ══ -->
+    <section id="sec-tools" class="sec-tools">
+      <div class="section-container">
+        <div class="section-label section-label--sec">
+          <span class="label-line label-line--sec"></span>
+          <span>Ferramentas</span>
+        </div>
+        <h2 class="section-title">Ferramentas que utilizo</h2>
+
+        <div class="sec-tools-grid">
+
+          <!-- Docker -->
+          <div class="sec-tool-card">
+            <div class="sec-tool-header">
+              <div class="sec-tool-icon sec-tool-icon--docker">
+                <i class="fab fa-docker"></i>
+              </div>
+              <div class="sec-tool-info">
+                <h3 class="sec-tool-name">Docker</h3>
+                <p class="sec-tool-sub">Containers e orquestração de ambientes</p>
+              </div>
+              <span class="sec-tool-pct">80%</span>
+            </div>
+            <div class="sec-tool-bar">
+              <div class="sec-tool-fill" data-w="80"></div>
+            </div>
+            <div class="sec-tool-tags">
+              <span>Containers</span><span>DevOps</span><span>Ambientes isolados</span>
+            </div>
+          </div>
+
+          <!-- Zabbix -->
+          <div class="sec-tool-card">
+            <div class="sec-tool-header">
+              <div class="sec-tool-icon sec-tool-icon--zabbix">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="sec-tool-info">
+                <h3 class="sec-tool-name">Zabbix</h3>
+                <p class="sec-tool-sub">Monitoramento de infraestrutura e alertas</p>
+              </div>
+              <span class="sec-tool-pct">70%</span>
+            </div>
+            <div class="sec-tool-bar">
+              <div class="sec-tool-fill" data-w="70"></div>
+            </div>
+            <div class="sec-tool-tags">
+              <span>Monitoramento</span><span>Alertas</span><span>Métricas</span>
+            </div>
+          </div>
+
+          <!-- Active Directory -->
+          <div class="sec-tool-card">
+            <div class="sec-tool-header">
+              <div class="sec-tool-icon sec-tool-icon--ad">
+                <i class="fab fa-windows"></i>
+              </div>
+              <div class="sec-tool-info">
+                <h3 class="sec-tool-name">Active Directory</h3>
+                <p class="sec-tool-sub">Gestão de identidades e acessos corporativos</p>
+              </div>
+              <span class="sec-tool-pct">70%</span>
+            </div>
+            <div class="sec-tool-bar">
+              <div class="sec-tool-fill" data-w="70"></div>
+            </div>
+            <div class="sec-tool-tags">
+              <span>IAM</span><span>GPO</span><span>Autenticação</span>
+            </div>
+          </div>
+
+          <!-- Wazuh -->
+          <div class="sec-tool-card">
+            <div class="sec-tool-header">
+              <div class="sec-tool-icon sec-tool-icon--wazuh">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <div class="sec-tool-info">
+                <h3 class="sec-tool-name">Wazuh</h3>
+                <p class="sec-tool-sub">SIEM open-source e detecção de ameaças</p>
+              </div>
+              <span class="sec-tool-pct">50%</span>
+            </div>
+            <div class="sec-tool-bar">
+              <div class="sec-tool-fill" data-w="50"></div>
+            </div>
+            <div class="sec-tool-tags">
+              <span>SIEM</span><span>XDR</span><span>Threat Detection</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ══ CERTIFICAÇÕES ══ -->
     <section id="certs" class="certs">
       <div class="section-container">
@@ -152,13 +234,12 @@
 
         <div class="cert-list">
 
-          <!-- DIO Bootcamp -->
           <div class="cert-card">
             <div class="cert-icon cert-icon--dev"><i class="fab fa-html5"></i></div>
             <div class="cert-body">
               <div class="cert-meta">
                 <span class="cert-tag cert-tag--done">Concluído</span>
-                <span class="cert-year">2025 &middot; DIO · 102h</span>
+                <span class="cert-year">2025 &middot; DIO &middot; 102h</span>
               </div>
               <h3 class="cert-title">Bootcamp Santander 2025 – Front-End</h3>
               <p class="cert-desc">Bootcamp completo focado em HTML, CSS e JavaScript, com projetos práticos e metodologia hands-on.</p>
@@ -170,7 +251,6 @@
             </div>
           </div>
 
-          <!-- Linux Udemy -->
           <div class="cert-card">
             <div class="cert-icon cert-icon--linux"><i class="fab fa-linux"></i></div>
             <div class="cert-body">
@@ -188,13 +268,12 @@
             </div>
           </div>
 
-          <!-- Senac IA -->
           <div class="cert-card">
             <div class="cert-icon cert-icon--ai"><i class="fas fa-robot"></i></div>
             <div class="cert-body">
               <div class="cert-meta">
                 <span class="cert-tag cert-tag--done">Concluído</span>
-                <span class="cert-year">2025 &middot; Senac RJ · 80h</span>
+                <span class="cert-year">2025 &middot; Senac RJ &middot; 80h</span>
               </div>
               <h3 class="cert-title">Programador Front-End com IA</h3>
               <p class="cert-desc">Curso focado em HTML, CSS, JavaScript, React e Inteligência Artificial aplicada ao desenvolvimento web.</p>
@@ -206,7 +285,6 @@
             </div>
           </div>
 
-          <!-- LGPD -->
           <div class="cert-card">
             <div class="cert-icon cert-icon--sec"><i class="fas fa-shield-alt"></i></div>
             <div class="cert-body">
@@ -224,7 +302,6 @@
             </div>
           </div>
 
-          <!-- Cyber Security Udemy -->
           <div class="cert-card">
             <div class="cert-icon cert-icon--sec"><i class="fas fa-lock"></i></div>
             <div class="cert-body">
@@ -242,13 +319,12 @@
             </div>
           </div>
 
-          <!-- Hackers do Bem — destacado -->
           <div class="cert-card">
             <div class="cert-icon cert-icon--hdb"><i class="fas fa-user-shield"></i></div>
             <div class="cert-body">
               <div class="cert-meta">
                 <span class="cert-tag cert-tag--done">Concluído</span>
-                <span class="cert-year">Jan 2026 &middot; Hackers do Bem · 144h</span>
+                <span class="cert-year">Jan 2026 &middot; Hackers do Bem &middot; 144h</span>
               </div>
               <h3 class="cert-title">Formação em Cibersegurança — Hackers do Bem</h3>
               <p class="cert-desc">Formação completa com dois módulos: Nivelamento e Básico. 144 horas de conteúdo técnico de cibersegurança.</p>
@@ -262,7 +338,7 @@
               </a>
             </div>
           </div>
-          <!-- Banco de dados -->
+
           <div class="cert-card">
             <div class="cert-icon cert-icon--sec"><i class="fas fa-database"></i></div>
             <div class="cert-body">
@@ -295,7 +371,6 @@
 
         <div class="edu-timeline">
 
-          <!-- Bacharelado -->
           <div class="edu-card">
             <div class="edu-left">
               <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -312,7 +387,6 @@
             </div>
           </div>
 
-          <!-- Pós Defesa Cibernética -->
           <div class="edu-card">
             <div class="edu-left">
               <div class="edu-icon edu-icon--progress"><i class="fas fa-shield-alt"></i></div>
@@ -331,11 +405,9 @@
             </div>
           </div>
 
-          <!-- Google Cybersecurity -->
           <div class="edu-card">
             <div class="edu-left">
               <div class="edu-icon edu-icon--progress edu-icon--google"><i class="fab fa-google"></i></div>
-              <!-- sem linha no último item -->
             </div>
             <div class="edu-content">
               <div class="edu-badge edu-badge--progress">

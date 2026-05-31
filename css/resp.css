@@ -61,7 +61,7 @@
   .float-icon--lock   { top: 52%;  left: 2%; }
   .float-icon--google { top: 6%;   right: 4%; }
   .float-icon--eye    { top: 52%;  right: 2%; }
-  .float-icon--code   { bottom: 2%; left: 24%; }
+  .float-icon--code   { bottom: 93%; left: 33%; }
 
   /* Stats segurança */
   .sec-stats { gap: 1.2rem; }
@@ -174,8 +174,42 @@
 /* ────────────────────────────────────────────
    Landscape em altura baixa (ex: iPhone landscape)
    ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-scroll { display: none; }
+}
+
 @media (max-height: 500px) and (orientation: landscape) {
   .hero { min-height: unset; padding: 8rem 2.4rem 4rem; }
   .hero-scroll { display: none; }
   .hero-visual { height: 260px; }
+}
+
+
+/* ════════════════════════════════
+   CTA SECURITY — responsivo
+   ════════════════════════════════ */
+@media (max-width: 680px) {
+  .cta-security__title { font-size: clamp(3rem, 8vw, 4.8rem); }
+  .cta-security__btn   { width: 100%; max-width: 340px; justify-content: center; }
+  .cta-security__chips { gap: .6rem; }
+  .cta-chip            { font-size: 1.2rem; padding: .5rem 1rem; }
+}
+
+@media (max-width: 480px) {
+  .cta-security__inner { padding: 5rem 1.6rem 6rem; }
+  .cta-security__desc  { font-size: 1.5rem; }
+}
+
+/* ════════════════════════════════
+   SEC-TOOLS — responsivo
+   ════════════════════════════════ */
+@media (max-width: 900px) {
+  .sec-tools-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .sec-tool-card   { padding: 2rem 1.8rem; }
+  .sec-tool-header { flex-wrap: wrap; gap: 1.2rem; }
+  .sec-tool-pct    { margin-left: auto; }
+  .sec-tool-name   { font-size: 1.5rem; }
 }

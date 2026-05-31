@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
     document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
 
-    document.querySelectorAll('a, button, .project-card, .skill-item, .cert-card, .stat-chip').forEach(el => {
+    document.querySelectorAll('a, button, .project-card, .skill-item, .cert-card, .stat-chip, .sec-tool-card').forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('big'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
     });
@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Fecha ao clicar fora
     document.addEventListener('click', e => {
       if (!header.contains(e.target)) {
         hamburger.classList.remove('open');
@@ -110,17 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ──────────────────────────────
-     REVEAL ON SCROLL
-     (hero reveals disparam imediatamente)
+     REVEAL ON SCROLL — hero imediato
   ────────────────────────────── */
-  // Hero revela logo
   requestAnimationFrame(() => {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
   });
 
-  // Cards com stagger
+  /* ──────────────────────────────
+     STAGGER REVEAL — cards gerais
+  ────────────────────────────── */
   const staggerEls = document.querySelectorAll(
-    '.skill-item, .project-card, .cert-card, .edu-card, .stat-chip'
+    '.project-card, .cert-card, .edu-card, .stat-chip, .cta-chip'
   );
 
   const revealObs = new IntersectionObserver((entries) => {
@@ -129,72 +128,107 @@ document.addEventListener('DOMContentLoaded', () => {
       const el  = entry.target;
       const idx = [...el.parentElement.children].indexOf(el);
       el.style.transitionDelay = (idx * 0.07) + 's';
-
-      if (el.classList.contains('skill-item')) {
-        el.classList.add('in-view');
-      } else {
-        el.style.opacity   = '1';
-        el.style.transform = 'none';
-      }
+      el.style.opacity   = '1';
+      el.style.transform = 'none';
       revealObs.unobserve(el);
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
   staggerEls.forEach(el => {
-    if (!el.classList.contains('skill-item')) {
-      el.style.opacity   = '0';
-      el.style.transform = 'translateY(22px)';
-      el.style.transition = 'opacity .65s var(--ease), transform .65s var(--ease)';
-    }
+    el.style.opacity   = '0';
+    el.style.transform = 'translateY(22px)';
+    el.style.transition = 'opacity .65s var(--ease), transform .65s var(--ease)';
     revealObs.observe(el);
   });
 
   /* ──────────────────────────────
-     SKILL BARS ANIMATION
+     SKILL BARS — barras de domínio dev
   ────────────────────────────── */
-  const barObs = new IntersectionObserver((entries) => {
+  const skillBarObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      const fill = entry.target.querySelector('.skill-fill');
+      const item = entry.target;
+      item.classList.add('in-view');
+      const fill = item.querySelector('.skill-fill');
       if (fill && !fill.dataset.animated) {
-        // small timeout so the bar is visible before animating
         setTimeout(() => {
           fill.style.width = fill.dataset.w + '%';
           fill.dataset.animated = '1';
         }, 150);
       }
-      barObs.unobserve(entry.target);
+      skillBarObs.unobserve(item);
     });
-  }, { threshold: 0.25 });
+  }, { threshold: 0.2 });
 
-  document.querySelectorAll('.skill-item').forEach(item => barObs.observe(item));
+  document.querySelectorAll('.skill-item').forEach(item => skillBarObs.observe(item));
 
   /* ──────────────────────────────
-     FLOAT ICONS — spin on hover
+     SEC-TOOL CARDS + BARS — ferramentas de segurança
+  ────────────────────────────── */
+  const toolBarObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+
+      // stagger de entrada
+      const idx = [...card.parentElement.children].indexOf(card);
+      setTimeout(() => {
+        card.classList.add('in-view');
+      }, idx * 80);
+
+      // anima barra após a transição de entrada
+      const fill = card.querySelector('.sec-tool-fill');
+      if (fill && !fill.dataset.animated) {
+        setTimeout(() => {
+          fill.style.width = fill.dataset.w + '%';
+          fill.dataset.animated = '1';
+        }, idx * 80 + 200);
+      }
+
+      toolBarObs.unobserve(card);
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.sec-tool-card').forEach(card => toolBarObs.observe(card));
+
+  /* ──────────────────────────────
+     FLOAT ICONS — pausa no hover
   ────────────────────────────── */
   document.querySelectorAll('.float-icon').forEach(icon => {
-    icon.addEventListener('mouseenter', () => {
-      icon.style.animationPlayState = 'paused';
-    });
-    icon.addEventListener('mouseleave', () => {
-      icon.style.animationPlayState = 'running';
-    });
+    icon.addEventListener('mouseenter', () => { icon.style.animationPlayState = 'paused'; });
+    icon.addEventListener('mouseleave', () => { icon.style.animationPlayState = 'running'; });
   });
 
   /* ──────────────────────────────
      AVATAR RING — pausa no hover
   ────────────────────────────── */
-  const ring = document.querySelector('.avatar-ring');
+  const ring       = document.querySelector('.avatar-ring');
   const avatarWrap = document.querySelector('.avatar-wrap');
   if (ring && avatarWrap) {
-    avatarWrap.addEventListener('mouseenter', () => {
-      ring.style.animationPlayState = 'paused';
-    });
-    avatarWrap.addEventListener('mouseleave', () => {
-      ring.style.animationPlayState = 'running';
-    });
+    avatarWrap.addEventListener('mouseenter', () => { ring.style.animationPlayState = 'paused'; });
+    avatarWrap.addEventListener('mouseleave', () => { ring.style.animationPlayState = 'running'; });
   }
 
-  // Roda o onScroll uma vez para estado inicial correto
+  /* ──────────────────────────────
+     CTA SECURITY — reveal ao entrar na viewport
+  ────────────────────────────── */
+  const ctaInner = document.querySelector('.cta-security__inner');
+  if (ctaInner) {
+    const ctaObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        ctaInner.style.opacity   = '1';
+        ctaInner.style.transform = 'none';
+        ctaObs.unobserve(ctaInner);
+      });
+    }, { threshold: 0.15 });
+
+    ctaInner.style.opacity   = '0';
+    ctaInner.style.transform = 'translateY(32px)';
+    ctaInner.style.transition = 'opacity .9s var(--ease), transform .9s var(--ease)';
+    ctaObs.observe(ctaInner);
+  }
+
+  // estado inicial correto
   onScroll();
 });
