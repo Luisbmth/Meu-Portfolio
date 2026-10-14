@@ -281,7 +281,6 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
   object-position: center top;
   border-radius: 100%;
-  
 }
 
 .avatar-wrap {
@@ -307,11 +306,6 @@ img { max-width: 100%; display: block; }
 }
 @keyframes ring-spin { to { transform: rotate(360deg); } }
 
-/* 
-  COMO USAR SUA FOTO:
-  Remova o .avatar-placeholder e adicione:
-  <img src="./img/sua-foto.jpg" alt="Luis Felipe" class="avatar-photo">
-*/
 .avatar-placeholder {
   width: 200px; height: 200px;
   border-radius: 50%;
@@ -319,6 +313,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
   font-size: 7rem; color: var(--txt-3);
+  overflow: hidden;
 }
 .avatar-photo {
   width: 200px; height: 200px;
@@ -610,6 +605,89 @@ img { max-width: 100%; display: block; }
 .edu-inst  { font-size: 1.4rem; color: var(--txt-2); margin-bottom: 1.2rem; }
 .edu-desc  { font-size: 1.4rem; color: var(--txt-3); line-height: 1.7; margin-bottom: 1.6rem; }
 
+/* ══════════════════════════════════════════
+   EXPERIENCE LIST (bullets)
+   ══════════════════════════════════════════ */
+.exp-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: .7rem;
+  margin-bottom: 1.6rem;
+}
+.exp-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1.4rem;
+  color: var(--txt-2);
+  line-height: 1.6;
+}
+.exp-list li::before {
+  content: '';
+  position: absolute; left: 0; top: .7rem;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--sec);
+  box-shadow: 0 0 8px var(--sec-glow);
+}
+.exp-list li strong { color: var(--txt); font-weight: 500; }
+
+/* ══════════════════════════════════════════
+   INTERESTS
+   ══════════════════════════════════════════ */
+.interests {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+}
+
+.interest-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.8rem;
+  transition: border-color .3s, transform .3s var(--ease), box-shadow .3s;
+  opacity: 0; transform: translateY(20px);
+}
+
+.interest-card.in-view {
+  opacity: 1; transform: none;
+  transition: opacity .6s var(--ease), transform .6s var(--ease), border-color .3s, box-shadow .3s;
+}
+
+.interest-card:hover {
+  border-color: rgba(0,255,136,.3);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0,255,136,.06);
+}
+
+.interest-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(0,255,136,.10);
+  color: var(--sec);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.interest-card h3 {
+  font-size: 1.5rem; font-weight: 600;
+  letter-spacing: -.01em;
+  margin-bottom: .6rem;
+  color: var(--txt);
+}
+
+.interest-card p {
+  font-size: 1.3rem;
+  color: var(--txt-3);
+  line-height: 1.6;
+}
+
 /* ── FOOTER ── */
 .footer { border-top: 1px solid var(--border); padding: 4rem 2.8rem; }
 .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.8rem; }
@@ -639,9 +717,8 @@ img { max-width: 100%; display: block; }
 .back-top:hover { background: var(--accent); color: #000; border-color: transparent; transform: translateY(-3px); }
 .page--security .back-top:hover { background: var(--sec); }
 
-
 /* ══════════════════════════════════════════
-   CTA SECURITY — seção no final do index
+   CTA SECURITY
    ══════════════════════════════════════════ */
 .cta-security {
   background: var(--bg);
@@ -657,7 +734,6 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* orb decorativo */
 .cta-security__orb {
   position: absolute;
   width: 600px; height: 600px;
@@ -714,9 +790,8 @@ img { max-width: 100%; display: block; }
   padding: 1.4rem 3.2rem;
 }
 
-
 /* ══════════════════════════════════════════
-   SEC-TOOLS — ferramentas de segurança
+   SEC-TOOLS
    ══════════════════════════════════════════ */
 .sec-tools {
   background: var(--bg);

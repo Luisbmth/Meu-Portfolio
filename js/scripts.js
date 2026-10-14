@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
     document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
 
-    document.querySelectorAll('a, button, .project-card, .skill-item, .cert-card, .stat-chip, .sec-tool-card').forEach(el => {
+    document.querySelectorAll(
+      'a, button, .project-card, .skill-item, .cert-card, .stat-chip, .sec-tool-card, .edu-card, .interest-card, .cta-chip'
+    ).forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('big'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
     });
@@ -166,17 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
      SEC-TOOL CARDS + BARS — ferramentas de segurança
   ────────────────────────────── */
   const toolBarObs = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const card = entry.target;
+      const idx  = [...card.parentElement.children].indexOf(card);
 
-      // stagger de entrada
-      const idx = [...card.parentElement.children].indexOf(card);
-      setTimeout(() => {
-        card.classList.add('in-view');
-      }, idx * 80);
+      setTimeout(() => { card.classList.add('in-view'); }, idx * 80);
 
-      // anima barra após a transição de entrada
       const fill = card.querySelector('.sec-tool-fill');
       if (fill && !fill.dataset.animated) {
         setTimeout(() => {
@@ -190,6 +188,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
 
   document.querySelectorAll('.sec-tool-card').forEach(card => toolBarObs.observe(card));
+
+  /* ──────────────────────────────
+     INTEREST CARDS — reveal
+  ────────────────────────────── */
+  const interestObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      const idx  = [...card.parentElement.children].indexOf(card);
+      setTimeout(() => { card.classList.add('in-view'); }, idx * 70);
+      interestObs.unobserve(card);
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.interest-card').forEach(card => interestObs.observe(card));
 
   /* ──────────────────────────────
      FLOAT ICONS — pausa no hover

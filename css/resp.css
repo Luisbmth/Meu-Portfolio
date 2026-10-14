@@ -4,7 +4,7 @@
    ============================================ */
 
 /* ────────────────────────────────────────────
-   1440px — wide desktops (apenas ajustes finos)
+   1440px — wide desktops (ajustes finos)
    ──────────────────────────────────────────── */
 @media (min-width: 1440px) {
   .hero-inner  { gap: 8rem; }
@@ -23,6 +23,8 @@
   .project-card--featured { grid-column: span 2; }
 
   .skills-grid { grid-template-columns: 1fr; }
+
+  .interests-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ────────────────────────────────────────────
@@ -73,6 +75,12 @@
   /* Projects */
   .projects-grid { grid-template-columns: 1fr; }
   .project-card--featured { grid-column: span 1; }
+
+  /* Interests */
+  .interests-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Sec-tools */
+  .sec-tools-grid { grid-template-columns: 1fr; }
 }
 
 /* ────────────────────────────────────────────
@@ -109,6 +117,12 @@
 
   /* Header */
   .nav-container { padding: 0 2rem; }
+
+  /* CTA Security */
+  .cta-security__title { font-size: clamp(3rem, 8vw, 4.8rem); }
+  .cta-security__btn   { width: 100%; max-width: 340px; justify-content: center; }
+  .cta-security__chips { gap: .6rem; }
+  .cta-chip            { font-size: 1.2rem; padding: .5rem 1rem; }
 }
 
 /* ────────────────────────────────────────────
@@ -151,6 +165,20 @@
   /* Projects */
   .project-body { padding: 1.6rem 1.8rem 2rem; }
 
+  /* Interests — 1 coluna */
+  .interests-grid { grid-template-columns: 1fr; }
+  .interest-card  { padding: 2rem 1.6rem; }
+
+  /* CTA Security */
+  .cta-security__inner { padding: 5rem 1.6rem 6rem; }
+  .cta-security__desc  { font-size: 1.5rem; }
+
+  /* Sec-tools */
+  .sec-tool-card   { padding: 2rem 1.8rem; }
+  .sec-tool-header { flex-wrap: wrap; gap: 1.2rem; }
+  .sec-tool-pct    { margin-left: auto; }
+  .sec-tool-name   { font-size: 1.5rem; }
+
   /* Footer */
   .footer { padding: 3rem 1.6rem; }
 }
@@ -172,7 +200,7 @@
 }
 
 /* ────────────────────────────────────────────
-   Landscape em altura baixa (ex: iPhone landscape)
+   Landscape em altura baixa
    ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   .hero-scroll { display: none; }
@@ -182,34 +210,4 @@
   .hero { min-height: unset; padding: 8rem 2.4rem 4rem; }
   .hero-scroll { display: none; }
   .hero-visual { height: 260px; }
-}
-
-
-/* ════════════════════════════════
-   CTA SECURITY — responsivo
-   ════════════════════════════════ */
-@media (max-width: 680px) {
-  .cta-security__title { font-size: clamp(3rem, 8vw, 4.8rem); }
-  .cta-security__btn   { width: 100%; max-width: 340px; justify-content: center; }
-  .cta-security__chips { gap: .6rem; }
-  .cta-chip            { font-size: 1.2rem; padding: .5rem 1rem; }
-}
-
-@media (max-width: 480px) {
-  .cta-security__inner { padding: 5rem 1.6rem 6rem; }
-  .cta-security__desc  { font-size: 1.5rem; }
-}
-
-/* ════════════════════════════════
-   SEC-TOOLS — responsivo
-   ════════════════════════════════ */
-@media (max-width: 900px) {
-  .sec-tools-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 480px) {
-  .sec-tool-card   { padding: 2rem 1.8rem; }
-  .sec-tool-header { flex-wrap: wrap; gap: 1.2rem; }
-  .sec-tool-pct    { margin-left: auto; }
-  .sec-tool-name   { font-size: 1.5rem; }
 }
